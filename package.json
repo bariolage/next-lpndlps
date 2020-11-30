@@ -1,0 +1,26 @@
+{
+  "name": "next-lpndlps",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "^2.9.4",
+    "gray-matter": "^4.0.2",
+    "image-size": "^0.9.3",
+    "next": "canary",
+    "raw-loader": "^4.0.2",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-markdown": "^5.0.3",
+    "remark-unwrap-images": "^2.0.0",
+    "typeface-boogaloo": "^1.1.13",
+    "typeface-cookie": "^1.1.13",
+    "typeface-cutive-mono": "^1.1.13",
+    "typeface-damion": "^1.1.13",
+    "typeface-mukta": "^1.1.13"
+  }
+}

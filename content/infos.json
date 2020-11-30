@@ -1,0 +1,19 @@
+{
+  "siteTitle": "Le Pain des Lou",
+  "logo": "/pndsl-carte.jpeg",
+  "navigation": [
+    {
+      "name": "Pains",
+      "slug": "/pains"
+    },
+    { "name": "À propos", "slug": "/" },
+    {
+      "name": "Points de vente",
+      "slug": "/vente"
+    },
+    {
+      "name": "Contact",
+      "slug": "/contact"
+    }
+  ]
+}
