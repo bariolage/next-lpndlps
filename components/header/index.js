@@ -24,7 +24,7 @@ const Header = (props) => {
         }}
         className={styles.figure}
       >
-        <Image src="/cover_test.jpg" layout="fill" objectFit="cover" />
+        <Image src="/a_la_craie-72px.jpg" layout="fill" objectFit="cover" />
       </motion.figure>
       <Link href="/">
         <a className={styles.title}>

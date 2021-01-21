@@ -1,9 +1,8 @@
 ---
 title: pain
 images:
-    - "/pain-froment-graines.jpeg"
-    - "/pain-froment-noix.jpg"
-    - "/pains-boule-nature.jpg"
+    - "/croquis boulange JL-72px.jpg"
+    - "/Morgan 20 par 20-300px.jpg"
 ---
 
 ### Pains

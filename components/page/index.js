@@ -10,7 +10,7 @@ const Page = (props) => {
         title={props.infos.siteTitle}
         navigation={props.infos.navigation}
       />
-      <main className={styles.main}>{props.children}</main>
+      <main className={`${styles.main}`}>{props.children}</main>
       <Footer />
     </Fragment>
   );

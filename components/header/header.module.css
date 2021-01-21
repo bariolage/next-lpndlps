@@ -4,8 +4,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 0 6rem;
+  padding: 2rem 6rem;
   padding-top: calc(32rem + 1rem);
+  background-color: var(--color-dark);
+  color: var(--color-white);
 }
 
 .figure {

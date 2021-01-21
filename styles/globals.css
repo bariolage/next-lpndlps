@@ -9,6 +9,9 @@
   --flex: 1;
   --lg-height: 32rem;
   --sm-height: 10rem;
+  --color-dark: #020202;
+  --color-white: #d9d5ca;
+  --color-primary: #ffdfb5;
 }
 @media (max-width: 48rem) {
   :root {
@@ -20,6 +23,8 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-body);
+  background-color: var(--color-primary);
+  color: var(--color-dark);
 }
 
 a {

@@ -1,5 +1,7 @@
 ---
-titre: Les points de vente
+title: Les points de vente
+images: 
+    - "/four_et_labo.jpg"
 ---
 
 ## Vente directe

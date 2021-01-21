@@ -5,4 +5,11 @@
 
 .figure {
   margin: 1rem 1rem 2rem 2rem;
+  background-color: lighten(blue, 15%);
+  background-blend-mode: multiply;
+  mix-blend-mode: multiply;
+}
+
+.illustration {
+  border: 2px solid red;
 }
