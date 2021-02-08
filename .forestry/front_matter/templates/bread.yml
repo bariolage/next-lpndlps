@@ -40,3 +40,5 @@ fields:
   type: image_gallery
   config: {}
   label: gallery
+pages:
+- content/pages/pain.md
