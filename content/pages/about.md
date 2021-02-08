@@ -6,6 +6,23 @@ images:
 message: Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis
   2012 et coopérative depuis 2019.
 section:
+- title: Statut Coopératif
+  cover: "/public/croquis boulange JL-72px.jpg"
+  content: Ne pouvant plus nier que le capitalisme est une des raisons principales
+    de l’effondrement de la biodiversité et du changement climatique, nous avons choisi
+    un statut coopératif. Le Pain des Lou appartient de fait à ses salariés et ne
+    peut être revendue à une entité extérieure.
+- title: Notre Méthode
+  content: "Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le
+    plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience
+    de plus en plus efficiente.  \nNous mettons tout en œuvre pour faire de notre
+    pain un aliment de base par excellence. La levure est proscrite dans le fournil,
+    100 % levain naturel et farine T110, pétrissage, divise et façonnage à la main
+    pour un fondant garanti sous les dents, cuisson au feu de bois dans un four à
+    chauffe directe, eau filtrée (système Berkey).  \nLa longue fermentation au levain
+    naturel permet de pré-digérer le blé afin d’assimiler tous ses nutriments et de
+    conserver notre pain au moins une semaine."
+  cover: "/public/pndsl-carte.jpeg"
 - title: Nature & Progrès
   cover: "/public/logo-nature-et-progres.png"
   content: "Nature&Progrès est une association ayant élaboré le premier cahier des
@@ -22,17 +39,6 @@ section:
     Une raison supplémentaire de refuser l’utilisation de machines dans le fournil,
     d’utiliser le bois comme énergie pour cuire le pain, et bientôt de livrer notre
     pain en vélo à assistance électrique."
-- title: Notre Méthode
-  content: "Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le
-    plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience
-    de plus en plus efficiente.  \nNous mettons tout en œuvre pour faire de notre
-    pain un aliment de base par excellence. La levure est proscrite dans le fournil,
-    100 % levain naturel et farine T110, pétrissage, divise et façonnage à la main
-    pour un fondant garanti sous les dents, cuisson au feu de bois dans un four à
-    chauffe directe, eau filtrée (système Berkey).  \nLa longue fermentation au levain
-    naturel permet de pré-digérer le blé afin d’assimiler tous ses nutriments et de
-    conserver notre pain au moins une semaine."
-  cover: "/public/pndsl-carte.jpeg"
 
 ---
 Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis 2012 et coopérative depuis 2019. Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience de plus en plus efficiente.
