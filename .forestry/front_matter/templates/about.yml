@@ -14,7 +14,7 @@ fields:
     schema:
       format: markdown
   label: Message
-- name: section
+- name: sections
   type: field_group_list
   fields:
   - name: title
@@ -40,6 +40,6 @@ fields:
     min: 
     max: 
     labelField: 
-  label: Section
+  label: Sections
 pages:
 - content/pages/about.md
