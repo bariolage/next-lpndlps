@@ -10,7 +10,6 @@ sections:
 - type: document
   path: content/pages/vente.md
   label: Points de vente
-  match: "**/*"
 upload_dir: public
 public_path: "/public"
 front_matter_path: ''
