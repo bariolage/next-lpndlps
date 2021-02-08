@@ -6,6 +6,22 @@ images:
 message: Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis
   2012 et coopérative depuis 2019.
 section:
+- title: Nature & Progrès
+  cover: "/public/logo-nature-et-progres.png"
+  content: "Nature&Progrès est une association ayant élaboré le premier cahier des
+    charges de l’agriculture biologique au monde en 1972. Ce cahier des charges reste
+    encore aujourd’hui le plus exigeant de tous et inclut l’aspect social d’une entreprise
+    en plus du volet environnemental.\n\n  \nNos valeurs sont les suivantes :- Le
+    respect des équilibres des écosystèmes vivants (sol, végétaux et animaux) - La
+    santé des hommes et de la Terre, - Une agriculture paysanne, à taille humaine,
+    privilégiant le local et les circuits de proximité, - Des échanges équitables
+    au nord comme au sud, - Le partage des savoirs et des savoirs –faire, l’échange,
+    le lien social. - Résilience  \nConscients des enjeux climatiques et énergétiques,
+    nous travaillons dans une démarche résiliente autant que possible c’est à dire
+    en cherchant à tendre vers une consommation d’énergie minimale et donc SOUTENABLE.
+    Une raison supplémentaire de refuser l’utilisation de machines dans le fournil,
+    d’utiliser le bois comme énergie pour cuire le pain, et bientôt de livrer notre
+    pain en vélo à assistance électrique."
 - title: Notre Méthode
   content: "Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le
     plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience
