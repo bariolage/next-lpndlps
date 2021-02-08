@@ -5,6 +5,10 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
+  path: content/pages/vente.md
+  label: Points de vente
+  match: "**/*"
+- type: document
   path: content/pages/pain.md
   label: Pains
 upload_dir: public
