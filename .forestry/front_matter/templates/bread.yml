@@ -1,6 +1,7 @@
 ---
 label: Bread
-hide_body: true
+hide_body: false
+display_field: content
 fields:
 - name: title
   type: text
@@ -41,7 +42,7 @@ fields:
   default: ''
   config:
     required: false
-    wysiwyg: false
+    wysiwyg: true
     schema:
       format: markdown
   label: content
