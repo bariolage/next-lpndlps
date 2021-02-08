@@ -1,10 +1,23 @@
 ---
-title: Boulangerie de Plougastel-Daoulas
+title: Notre Histoire
 images:
-    - "/pndsl-carte.jpeg"
-    - "/visuel5enfour.jpg"
----
+- "/pndsl-carte.jpeg"
+- "/visuel5enfour.jpg"
+message: Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis
+  2012 et coopérative depuis 2019.
+section:
+- title: Notre Méthode
+  content: "Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le
+    plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience
+    de plus en plus efficiente.  \nNous mettons tout en œuvre pour faire de notre
+    pain un aliment de base par excellence. La levure est proscrite dans le fournil,
+    100 % levain naturel et farine T110, pétrissage, divise et façonnage à la main
+    pour un fondant garanti sous les dents, cuisson au feu de bois dans un four à
+    chauffe directe, eau filtrée (système Berkey).  \nLa longue fermentation au levain
+    naturel permet de pré-digérer le blé afin d’assimiler tous ses nutriments et de
+    conserver notre pain au moins une semaine."
 
+---
 Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis 2012 et coopérative depuis 2019. Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience de plus en plus efficiente.
 
 ![](/pndsl-carte.jpeg)
@@ -33,4 +46,3 @@ Conscients des enjeux climatiques et énergétiques, nous travaillons dans une d
 ### Statut Coopératif
 
 Ne pouvant plus nier que le capitalisme est une des raisons principales de l’effondrement de la biodiversité et du changement climatique, nous avons choisi un statut coopératif. Le Pain des Lou appartient de fait à ses salariés et ne peut être revendue à une entité extérieure.
-

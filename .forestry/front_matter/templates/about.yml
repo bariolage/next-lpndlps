@@ -39,3 +39,5 @@ fields:
     max: 
     labelField: 
   label: Section
+pages:
+- content/pages/about.md
