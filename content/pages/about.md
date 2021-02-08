@@ -3,8 +3,8 @@ title: Notre Histoire
 images:
 - "/pndsl-carte.jpeg"
 - "/visuel5enfour.jpg"
-message: Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis
-  2012 et coopérative depuis 2019.
+message: 'Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas
+  depuis 2012 et coopérative depuis 2019. '
 section:
 - title: Statut Coopératif
   cover: "/public/croquis boulange JL-72px.jpg"
