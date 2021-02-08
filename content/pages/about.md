@@ -16,6 +16,7 @@ section:
     chauffe directe, eau filtrée (système Berkey).  \nLa longue fermentation au levain
     naturel permet de pré-digérer le blé afin d’assimiler tous ses nutriments et de
     conserver notre pain au moins une semaine."
+  cover: "/public/pndsl-carte.jpeg"
 
 ---
 Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis 2012 et coopérative depuis 2019. Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience de plus en plus efficiente.
