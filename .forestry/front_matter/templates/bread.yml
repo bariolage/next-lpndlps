@@ -25,17 +25,11 @@ fields:
       required: false
     label: type title
   - name: type_items
-    type: field_group_list
-    fields:
-    - name: type_item
-      type: text
-      config:
-        required: false
-      label: type item
+    type: list
     config:
+      use_select: false
       min: 
       max: 
-      labelField: 
     label: type items
   config:
     min: 
