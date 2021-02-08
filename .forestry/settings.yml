@@ -7,7 +7,6 @@ sections:
 - type: document
   path: content/pages/about.md
   label: À Propos
-  match: "**/*"
 - type: document
   path: content/pages/pain.md
   label: Pains
