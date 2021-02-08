@@ -1,7 +1,6 @@
 ---
 label: Bread
 hide_body: false
-display_field: content
 fields:
 - name: title
   type: text
@@ -37,15 +36,6 @@ fields:
     max: 
     labelField: 
   label: types
-- name: content
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: content
 - name: gallery
   type: image_gallery
   config: {}
