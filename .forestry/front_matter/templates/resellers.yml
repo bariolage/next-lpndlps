@@ -5,6 +5,45 @@ fields:
 - type: text
   name: title
   label: title
+- name: headline
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Headline
 - type: image_gallery
   name: images
   label: images
+- name: types
+  type: field_group_list
+  fields:
+  - name: type_title
+    type: text
+    config:
+      required: false
+    label: Type title
+  - name: reseller
+    type: field_group_list
+    fields:
+    - name: reseller_info
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: true
+        schema:
+          format: markdown
+      label: reseller info
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Reseller
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Types
