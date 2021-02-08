@@ -1,4 +1,51 @@
 ---
 label: Bread
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: headline
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: headline
+- name: types
+  type: field_group_list
+  fields:
+  - name: type_title
+    type: text
+    config:
+      required: false
+    label: type title
+  - name: type_items
+    type: list
+    config:
+      use_select: false
+      min: 
+      max: 
+    label: type items
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: types
+- name: content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: content
+- name: gallery
+  type: image_gallery
+  config: {}
+  label: gallery
