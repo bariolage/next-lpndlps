@@ -21,7 +21,7 @@ section:
     de fait à ses salariés et ne peut être revendue à une entité extérieure."
   cover: "/public/pndsl-carte.jpeg"
 - title: Nature & Progrès
-  cover: "/public/logo-nature-et-progres.png"
+  cover: "/public/croquis boulange JL-72px.jpg"
   content: "Nature&Progrès est une association ayant élaboré le premier cahier des
     charges de l’agriculture biologique au monde en 1972. Ce cahier des charges reste
     encore aujourd’hui le plus exigeant de tous et inclut l’aspect social d’une entreprise
