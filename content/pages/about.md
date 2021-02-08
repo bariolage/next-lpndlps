@@ -28,17 +28,17 @@ section:
   content: "Nature&Progrès est une association ayant élaboré le premier cahier des
     charges de l’agriculture biologique au monde en 1972. Ce cahier des charges reste
     encore aujourd’hui le plus exigeant de tous et inclut l’aspect social d’une entreprise
-    en plus du volet environnemental.\n\nNos valeurs sont les suivantes :- Le respect
-    des équilibres des écosystèmes vivants (sol, végétaux et animaux) \n\n\\- La santé
-    des hommes et de la Terre, - Une agriculture paysanne, à taille humaine, privilégiant
-    le local et les circuits de proximité, \n\n\\- Des échanges équitables au nord
-    comme au sud,\n\n\\- Le partage des savoirs et des savoirs –faire, l’échange,
-    le lien social. \n\n\\- Résilience\n\n  \nConscients des enjeux climatiques et
-    énergétiques, nous travaillons dans une démarche résiliente autant que possible
-    c’est à dire en cherchant à tendre vers une consommation d’énergie minimale et
-    donc SOUTENABLE. Une raison supplémentaire de refuser l’utilisation de machines
-    dans le fournil, d’utiliser le bois comme énergie pour cuire le pain, et bientôt
-    de livrer notre pain en vélo à assistance électrique."
+    en plus du volet environnemental.\n\nNos valeurs sont les suivantes :\n\n* Le
+    respect des équilibres des écosystèmes vivants (sol, végétaux et animaux) \n*
+    La santé des hommes et de la Terre, - Une agriculture paysanne, à taille humaine,
+    privilégiant le local et les circuits de proximité\n* Des échanges équitables
+    au nord comme au sud\n* Le partage des savoirs et des savoirs –faire, l’échange,
+    le lien social.\n* Résilience\n\n  \nConscients des enjeux climatiques et énergétiques,
+    nous travaillons dans une démarche résiliente autant que possible c’est à dire
+    en cherchant à tendre vers une consommation d’énergie minimale et donc SOUTENABLE.
+    Une raison supplémentaire de refuser l’utilisation de machines dans le fournil,
+    d’utiliser le bois comme énergie pour cuire le pain, et bientôt de livrer notre
+    pain en vélo à assistance électrique."
 
 ---
 Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis 2012 et coopérative depuis 2019. Depuis nos débuts, nous travaillons sous la mention Nature&Progrès, le plus exigeant des cahiers des charges biologiques et nous engageons pour une résilience de plus en plus efficiente.
