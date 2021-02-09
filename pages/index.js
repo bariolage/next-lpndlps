@@ -1,7 +1,6 @@
 import matter from "gray-matter";
 import Text from "../components/text";
 import Images from "../components/images";
-import fetchEntries from "../lib/api";
 import Hero from "../components/hero";
 import Cover from "../components/cover";
 
