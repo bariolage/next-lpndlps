@@ -14,9 +14,11 @@ fields:
     schema:
       format: markdown
   label: Message
-- type: image_gallery
-  name: images
-  label: images
+- name: cover
+  type: file
+  config:
+    maxSize: 64
+  label: Image de couverture
 - name: pos
   type: field_group_list
   fields:
@@ -29,13 +31,9 @@ fields:
     type: field_group_list
     fields:
     - name: name
-      type: textarea
-      default: ''
+      type: text
       config:
         required: false
-        wysiwyg: true
-        schema:
-          format: markdown
       label: Nom
     - name: address
       type: text
