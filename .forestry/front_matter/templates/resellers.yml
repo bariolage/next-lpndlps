@@ -4,7 +4,7 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Titre
 - name: message
   type: textarea
   default: ''
@@ -13,7 +13,7 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-  label: Message
+  label: Introduction
 - name: cover
   type: file
   config:
@@ -39,7 +39,7 @@ fields:
       type: text
       config:
         required: false
-      label: Addresse
+      label: Adresse
     - name: coordinates
       type: field_group
       config: {}
@@ -74,6 +74,6 @@ fields:
     min: 
     max: 
     labelField: 
-  label: Points de vente
+  label: Carte des points de vente
 pages:
 - content/pages/vente.md
