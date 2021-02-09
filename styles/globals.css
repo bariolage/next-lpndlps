@@ -24,7 +24,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-body);
-  background-color: var(--color-primary);
+  background-color: var(--color-dark);
   color: var(--color-dark);
   letter-spacing: 0.125rem;
   line-height: 1.5rem;
