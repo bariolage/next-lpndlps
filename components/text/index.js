@@ -38,10 +38,6 @@ const Text = ({ body, id }) => {
         <Link {...props} />
       );
     },
-    heading: (props) => {
-      console.log(props);
-      return <h3 {...props} />;
-    },
   };
   return (
     <section id={id} className={styles.section}>

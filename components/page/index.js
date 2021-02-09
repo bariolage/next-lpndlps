@@ -5,7 +5,6 @@ import Footer from "../footer";
 import Image from "next/image";
 
 const Page = (props) => {
-  console.log(props);
   return (
     <Fragment>
       <Header
