@@ -27,8 +27,8 @@ bg: "#007d96e6"
 ---
 Tous nos ingrédients sont a minima certifiés AB, au mieux N&P.
 
-* Froment complet: Farine blé complet, 100 % levain naturel, eau filtrée, seigle et sel.
-* Pain Soba: Farine de sarrasin, 100% levain naturel, eau filtrée, et sel
+* Froment complet : Farine blé complet, 100 % levain naturel, eau filtrée, seigle et sel.
+* Pain Soba : Farine de sarrasin, 100% levain naturel, eau filtrée, et sel
 
 Farines de froment, de seigle et de sarrasin : **Eurl La ferme à Ergué Gabéric** près de Quimper. Farine de sarrasin : **La ferme de Dinéol** (N&P) près de Chateaulin. Sel : **Camille et Arnaud Guillonnet** à Guérande sous mention N&P. Noix : **ferme des Gariottes** dans le Périgord. Nos autres graines et fruits secs nous sont fournies par **Boyere-Vijaya**.
 
