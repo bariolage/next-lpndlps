@@ -2,18 +2,17 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 var unwrapImages = require("remark-unwrap-images");
-import styles from "./text.module.css";
+import styles from "./article.module.css";
 
-const Text = ({ body, id }) => {
+const Article = ({ body }) => {
   const renderers = {
+    root: (props) => <section className={styles.section} {...props} />,
     image: (props) => {
       return (
         <figure
           style={{
             position: "relative",
-            width: "50%" /* , height: `${size.height /size.width * 100}`%  */,
-            height: "20rem",
-            margin: "4rem auto",
+            width: "100%" /* , height: `${size.height /size.width * 100}`%  */,
           }}
         >
           <Image
@@ -28,31 +27,21 @@ const Text = ({ body, id }) => {
     },
     link: (props) => {
       return props.href.startsWith("http") ? (
-        <a
-          className="styles.link"
-          rel="noopener noreferrer"
-          target="_blank"
-          {...props}
-        />
+        <a rel="noopener noreferrer" target="_blank" {...props} />
       ) : (
         <Link {...props} />
       );
     },
-    heading: (props) => {
-      console.log(props);
-      return <h3 {...props} />;
-    },
   };
   return (
-    <section id={id} className={styles.section}>
+    <>
       <ReactMarkdown
         plugins={[unwrapImages]}
         source={body}
         renderers={renderers}
-        id="infos"
       />
-    </section>
+    </>
   );
 };
 
-export default Text;
+export default Article;

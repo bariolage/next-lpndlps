@@ -1,15 +1,20 @@
 {
   "siteTitle": "Le Pain des Lou",
+  "headline": "Fournil artisanal Nature & Progrès",
   "logo": "/pndsl-carte.jpeg",
   "navigation": [
-    { "name": "À propos", "slug": "/" },
+    { "name": "Qui Sommes-nous ?", "slug": "/" },
     {
-      "name": "Pains",
+      "name": "Nos Pains",
       "slug": "/pains"
     },
     {
-      "name": "Points de vente",
+      "name": "Nos Points de Vente",
       "slug": "/vente"
+    },
+    {
+      "name": "Nous Contacter",
+      "slug": "#contact"
     }
   ]
 }

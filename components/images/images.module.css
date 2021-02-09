@@ -1,15 +1,27 @@
 .section {
-  flex: 3;
-  padding: 0rem;
+  padding: 0.5rem;
+  padding-top: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 0.5rem;
+  max-width: 64rem;
+  width: 50%;
 }
 
 .figure {
-  margin: 1rem 1rem 2rem 2rem;
-  background-color: lighten(blue, 15%);
-  background-blend-mode: multiply;
-  mix-blend-mode: multiply;
+  position: relative;
+  margin: 0;
+  height: 16rem;
+  padding-bottom: 100%;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.illustration {
-  border: 2px solid red;
+@media (max-width: 48rem) {
+  .section {
+    padding: 0;
+    grid-gap: 0.25rem;
+    max-width: 100%;
+    width: 100%;
+  }
 }

@@ -1,17 +1,18 @@
 :root {
-  --font-body: Cutive Mono, Mukta, -apple-system, BlinkMacSystemFont, Segoe UI,
+  --font-body: Dosis, Mukta, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-heading: Dosis, Boogaloo, -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
-  --font-heading: Cookie, Damion, Boogaloo, -apple-system, BlinkMacSystemFont,
-    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
   --space: 2rem;
   --flex: 1;
   --lg-height: 32rem;
   --sm-height: 10rem;
-  --color-dark: #020202;
-  --color-white: #d9d5ca;
-  --color-primary: #ffdfb5;
+  --color-dark: #252525;
+  --color-white: #fefef6;
+  --color-primary: rgba(0, 125, 150, 1);
+  --color-primary-w-opacity: #007d96e6;
+  --color-dark-w-opacity: rgba(37, 37, 37, 0.9);
 }
 @media (max-width: 48rem) {
   :root {
@@ -25,6 +26,9 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-primary);
   color: var(--color-dark);
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
+  font-weight: 500;
 }
 
 a {
@@ -34,5 +38,5 @@ a {
 
 * {
   box-sizing: border-box;
-  border: 0px solid red;
+  border: 10x solid red;
 }

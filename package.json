@@ -8,7 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "contentful": "^8.1.7",
     "framer-motion": "^2.9.4",
+    "google-map-react": "^2.1.9",
     "gray-matter": "^4.0.2",
     "image-size": "^0.9.3",
     "next": "canary",
@@ -21,6 +28,9 @@
     "typeface-cookie": "^1.1.13",
     "typeface-cutive-mono": "^1.1.13",
     "typeface-damion": "^1.1.13",
-    "typeface-mukta": "^1.1.13"
+    "typeface-dosis": "^1.1.13",
+    "typeface-mukta": "^1.1.13",
+    "typeface-pompiere": "^1.1.13",
+    "typeface-rubik": "^1.1.13"
   }
 }

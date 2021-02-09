@@ -1,0 +1,12 @@
+.div {
+  height: 40rem;
+  width: 50%;
+  z-index: 1;
+}
+
+@media (max-width: 48rem) {
+  .div {
+    height: 20rem;
+    width: 100%;
+  }
+}

@@ -1,32 +1,33 @@
 import matter from "gray-matter";
-import sizeOf from "image-size";
 import Text from "../components/text";
 import Images from "../components/images";
+import fetchEntries from "../lib/api";
+import Hero from "../components/hero";
+import Cover from "../components/cover";
 
 export async function getStaticProps() {
   const content = await import(`../content/pages/about.md`);
   const data = matter(content.default);
-  const images = [];
-  data.data.images.map((image) => {
-    images.push({
-      src: image,
-      size: sizeOf("public" + image),
-    });
-  });
+
   return {
     props: {
       title: data.data.title,
       body: data.content,
-      images,
+      data: data.data,
     },
   };
 }
 
-export default function Home({ body, images }) {
+export default function Home({ body, images, data, pageProps }) {
   return (
     <>
-      <Text body={body} />
-      <Images images={images} />
+      <Hero title={data.title} message={data.message} />
+      {data.section.map((section, i) => (
+        <>
+          <Text body={section.content} />
+          <Cover image={section.cover} />
+        </>
+      ))}
     </>
   );
 }

@@ -1,15 +1,35 @@
 .section {
-  flex: 2;
-  padding: 1rem;
-  font-size: 0.875rem;
-  font-weight: 200;
+  margin: 0 auto;
+  font-weight: 500;
+  position: relative;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 4rem;
+  width: 50%;
+}
+
+.section > * {
+  max-width: 64rem;
 }
 
 .section p {
-  margin: 0;
+  margin: 1rem auto;
+  margin-bottom: 0;
 }
+
+.section h1 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
 .section h3 {
   font-size: 1.5rem;
+  line-height: 1.5rem;
   font-weight: bold;
   margin: 1rem 0 1rem 0;
   text-align: center;
@@ -23,11 +43,51 @@
 }
 
 .section ul {
+  width: 100%;
   padding-left: 0.5rem;
-  margin: 0.25rem 0 0.5rem 0;
   list-style-type: none;
+  margin: 0 auto;
 }
 
 .section li::before {
   content: "/";
+}
+
+.link a:hover {
+  color: var(--color-dark);
+}
+
+.carte {
+  display: flex;
+}
+
+.categorie {
+  flex: 1;
+}
+
+.categorie_title {
+  font-family: var(--font-heading);
+}
+
+.categorie_list {
+  padding: 0;
+}
+
+.categorie_item {
+  list-style: none;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 200;
+}
+
+@media (max-width: 48rem) {
+  .section {
+    margin: 0 auto;
+    font-weight: 500;
+    position: relative;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    padding: 2rem 1rem;
+    width: 100%;
+  }
 }
