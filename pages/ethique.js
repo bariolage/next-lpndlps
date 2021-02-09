@@ -1,4 +1,4 @@
-import matter from "gray-matter";
+/* import matter from "gray-matter";
 import sizeOf from "image-size";
 import Text from "../components/text";
 import Images from "../components/images";
@@ -30,3 +30,4 @@ export default function Ethique({ body, images }) {
     </>
   );
 }
+ */
