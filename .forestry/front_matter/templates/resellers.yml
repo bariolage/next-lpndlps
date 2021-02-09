@@ -5,7 +5,7 @@ fields:
 - type: text
   name: title
   label: title
-- name: headline
+- name: message
   type: textarea
   default: ''
   config:
@@ -13,22 +13,22 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
-  label: Headline
+  label: Message
 - type: image_gallery
   name: images
   label: images
-- name: types
+- name: pos
   type: field_group_list
   fields:
-  - name: type_title
+  - name: title
     type: text
     config:
       required: false
-    label: Type title
-  - name: reseller
+    label: Catégorie
+  - name: items
     type: field_group_list
     fields:
-    - name: reseller_info
+    - name: name
       type: textarea
       default: ''
       config:
@@ -36,16 +36,46 @@ fields:
         wysiwyg: true
         schema:
           format: markdown
-      label: reseller info
+      label: Nom
+    - name: address
+      type: text
+      config:
+        required: false
+      label: Addresse
+    - name: coordinates
+      type: field_group
+      config: {}
+      fields:
+      - name: latitude
+        type: number
+        label: Latitude
+        description: ''
+        default: 0
+        required: true
+        config:
+          min: 
+          max: 
+          step: 
+      - name: longitude
+        type: number
+        label: Longitude
+        description: ''
+        default: 0
+        required: true
+        config:
+          min: 
+          max: 
+          step: 
+      label: Coordonnées
     config:
       min: 
       max: 
       labelField: 
-    label: Reseller
+    label: Points de Vente
   config:
     min: 
     max: 
     labelField: 
-  label: Types
+  label: Points de vente
 pages:
 - content/pages/vente.md
