@@ -5,6 +5,10 @@ import Table from "../components/table";
 import Cover from "../components/cover";
 import Map from "../components/map";
 
+export const config = {
+  amp: true,
+};
+
 export async function getStaticProps() {
   const content = await import(`../content/pages/vente.md`);
   const data = matter(content.default);

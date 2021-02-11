@@ -5,6 +5,10 @@ import Table from "../components/table";
 import Hero from "../components/hero";
 import Cover from "../components/cover";
 
+export const config = {
+  amp: true,
+};
+
 export async function getStaticProps() {
   const content = await import(`../content/pages/pain.md`);
   const data = matter(content.default);
