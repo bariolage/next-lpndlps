@@ -3,6 +3,10 @@ import Text from "../components/text";
 import { Fragment } from "react";
 import Hero from "../components/hero";
 import Cover from "../components/cover";
+import { useAmp } from "next/amp";
+export const config = {
+  amp: true,
+};
 
 export async function getStaticProps() {
   const content = await import(`../content/pages/about.md`);
@@ -16,9 +20,13 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data }) {
+  const isAmp = useAmp();
   return (
     <>
-      <Hero title={data.title} message={data.message} />
+      <Hero
+        title={isAmp ? data.title : "-" + data.title}
+        message={data.message}
+      />
       {data.section.map((section, i) => (
         <Fragment key={`home-${i}`}>
           <Text body={section.content} />
