@@ -6,7 +6,7 @@ export default function Images({ images }) {
     <section className={styles.section}>
       {images.map((item, i) => (
         <figure key={`image-${i}`} className={styles.figure}>
-          <Image src={item} layout="fill" objectFit="cover" />
+          <Image alt="image" src={item} layout="fill" objectFit="cover" />
         </figure>
       ))}
     </section>

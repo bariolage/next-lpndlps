@@ -16,6 +16,7 @@ const Article = ({ body }) => {
           }}
         >
           <Image
+            alt="image"
             {...props}
             //width={600}
             //height={300}

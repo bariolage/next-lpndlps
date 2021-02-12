@@ -15,7 +15,12 @@ const Header = (props) => {
       <figure
         className={styles.figure + " " + (menuIsOpen && styles.figureBack)}
       >
-        <Image src="/a_la_craie-72px.jpg" layout="fill" objectFit="cover" />
+        <Image
+          alt="image"
+          src="/a_la_craie-72px.jpg"
+          layout="fill"
+          objectFit="cover"
+        />
       </figure>
       <Link href="/">
         <a className={styles.title}>
