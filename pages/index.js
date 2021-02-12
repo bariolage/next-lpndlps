@@ -5,7 +5,7 @@ import Hero from "../components/hero";
 import Cover from "../components/cover";
 
 export const config = {
-  amp: true,
+  //amp: true,
 };
 
 export async function getStaticProps() {

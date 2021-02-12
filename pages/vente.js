@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
 export const config = {
-  amp: true,
+  //amp: true,
 };
 
 export async function getStaticProps() {
