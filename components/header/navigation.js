@@ -2,8 +2,6 @@ import React from "react";
 import Link from "next/link";
 import styles from "./navigation.module.css";
 import { useRouter } from "next/router";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "../../pages/_app";
 
 const Navigation = (props) => {

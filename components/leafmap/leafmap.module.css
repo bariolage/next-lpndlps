@@ -1,12 +1,10 @@
-.div {
-  height: 40rem;
+.map {
   width: 50%;
-  z-index: 1;
+  height: 40rem;
 }
 
 @media (max-width: 48rem) {
-  .div {
-    height: 20rem;
+  .map {
     width: 100%;
   }
 }

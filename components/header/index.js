@@ -3,10 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.css";
 import { useRouter } from "next/router";
-import { motion } from "framer-motion";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useAppContext } from "../../pages/_app";
 import Navigation from "./navigation";
 
@@ -15,7 +11,7 @@ const Header = (props) => {
   const router = useRouter();
   const home = router.pathname === "/";
   return (
-    <header className={styles.header}>
+    <header id="header" className={styles.header}>
       <figure
         className={styles.figure + " " + (menuIsOpen && styles.figureBack)}
       >

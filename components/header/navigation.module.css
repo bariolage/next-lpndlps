@@ -20,12 +20,19 @@
 .li {
   background-color: var(--color-white);
   color: var(--color-dark);
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   list-style: none;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   font-weight: bold;
+  border: 2px solid var(--color-primary-w-opacity);
+}
+
+.li a {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .li:hover {
