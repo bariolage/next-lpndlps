@@ -5,10 +5,7 @@ import Table from "../components/table";
 import Cover from "../components/cover";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
-
-export const config = {
-  //amp: true,
-};
+import Page from "../components/page";
 
 export async function getStaticProps() {
   const content = await import(`../content/pages/vente.md`);
@@ -31,17 +28,25 @@ export async function getStaticProps() {
     });
   });
 
+  const infos = await import(`../content/infos.json`);
+  const contact = await import(`../content/pages/contact.md`);
+  const contactData = matter(contact.default);
   return {
     props: {
       body: data.content,
       data: data.data,
       table,
       shops,
+      infos: infos.default,
+      contact: {
+        frontmatter: contactData.data,
+        content: contactData.content,
+      },
     },
   };
 }
 
-export default function Vente({ body, data, table, shops }) {
+export default function Vente({ body, data, table, shops, infos, contact }) {
   const Map = useMemo(
     () =>
       dynamic(() => import("../components/leafmap"), {
@@ -51,12 +56,12 @@ export default function Vente({ body, data, table, shops }) {
     []
   );
   return (
-    <>
+    <Page infos={infos} contact={contact}>
       <Hero title={data.title} message={data.message} />
       <Table data={table} withMap="true" />
       <Map shops={shops} />
       <Cover image={data.cover} />
       <Text body={body} id="infos" />
-    </>
+    </Page>
   );
 }
