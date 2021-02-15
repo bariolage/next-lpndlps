@@ -40,12 +40,11 @@ const Item = styled.li`
   text-transform: uppercase;
   letter-spacing: 0.125rem;
   font-weight: bold;
-  border: 2px solid var(--color-primary-w-opacity);
 
   a {
     display: block;
     width: 100%;
-    padding: 0.5rem;
+    padding: 0.25rem;
   }
   &:hover {
     color: var(--color-white);
