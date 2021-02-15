@@ -6,8 +6,16 @@
   background-color: var(--color-white);
 }
 
+.main section:nth-child(2n + 4) {
+  order: +1;
+}
+
 @media (max-width: 48rem) {
   .main {
     flex-direction: column;
+  }
+
+  .main section:nth-child(2n + 4) {
+    order: 0;
   }
 }

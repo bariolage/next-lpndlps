@@ -4,7 +4,7 @@ import Image from "next/image";
 var unwrapImages = require("remark-unwrap-images");
 import styles from "./text.module.css";
 
-const Text = ({ body, id }) => {
+const Text = ({ body, id, full }) => {
   const renderers = {
     image: (props) => {
       return (
@@ -40,7 +40,7 @@ const Text = ({ body, id }) => {
     },
   };
   return (
-    <section id={id} className={styles.section}>
+    <section id={id} className={styles.section + " " + (full && styles.full)}>
       <ReactMarkdown
         plugins={[unwrapImages]}
         source={body}

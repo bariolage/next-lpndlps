@@ -6,6 +6,15 @@
   background-color: var(--color-primary);
   padding: 4rem;
   width: 50%;
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.full {
+  flex: 1 0 100%;
 }
 
 .section > * {
@@ -13,8 +22,7 @@
 }
 
 .section p {
-  margin: 1rem auto;
-  margin-bottom: 0;
+  margin: 0.5rem 0;
 }
 
 .section h3 {
@@ -26,6 +34,14 @@
   text-transform: uppercase;
 }
 
+.section > *:first-child {
+  margin-top: 0;
+}
+
+.section > *:last-child {
+  margin-bottom: 0;
+}
+
 .section h4 {
   font-weight: bold;
   margin: 0;
@@ -35,10 +51,10 @@
 
 .section ul {
   width: 100%;
-  padding: 1rem 0;
+  padding: 0;
   padding-left: 0.5rem;
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .section li {
@@ -78,7 +94,7 @@
     position: relative;
     color: var(--color-white);
     background-color: var(--color-primary);
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
     width: 100%;
   }
 }

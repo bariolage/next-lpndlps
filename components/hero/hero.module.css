@@ -1,7 +1,7 @@
 .hero {
   margin-left: 50vw;
   width: 50vw;
-  height: 40rem;
+  height: var(--header-height);
   color: var(--color-white);
   background-color: var(--color-primary);
   display: flex;

@@ -32,8 +32,8 @@ export default function Pains({ body, data, infos, contact }) {
       <Hero title={data.title} message={data.message} />
       <Table data={data.carte} />
       <Cover image={data.cover} />
-      <Text body={body} />
-      <Images images={data.gallery} />
+      <Text full="true" body={body} />
+      <Images full="true" images={data.gallery} />
     </Page>
   );
 }

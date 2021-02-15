@@ -2,8 +2,11 @@ import matter from "gray-matter";
 import Text from "../components/text";
 import { Fragment } from "react";
 import Hero from "../components/hero";
-import Cover from "../components/cover";
+//import Cover from "../components/cover";
 import Page from "../components/page";
+import dynamic from "next/dynamic";
+
+const Cover = dynamic(() => import("../components/cover"));
 
 export async function getStaticProps() {
   const content = await import(`../content/pages/about.md`);
