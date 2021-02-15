@@ -6,6 +6,8 @@ import Hero from "../components/hero";
 import Page from "../components/page";
 import dynamic from "next/dynamic";
 
+export const config = { amp: "hybrid" };
+
 const Cover = dynamic(() => import("../components/cover"));
 
 export async function getStaticProps() {

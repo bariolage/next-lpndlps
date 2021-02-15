@@ -18,6 +18,10 @@
     "react-leaflet": "^3.1.0",
     "react-markdown": "^5.0.3",
     "remark-unwrap-images": "^2.0.0",
+    "styled-components": "latest",
     "typeface-dosis": "^1.1.13"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "latest"
   }
 }

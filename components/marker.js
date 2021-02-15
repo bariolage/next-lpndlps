@@ -1,6 +1,5 @@
 import { Marker as BaseMarker, Popup } from "react-leaflet";
 import { useEffect, useRef } from "react";
-import styles from "./marker.module.css";
 
 const Marker = ({ shop, openPopup }) => {
   const markerRef = useRef();
@@ -17,8 +16,8 @@ const Marker = ({ shop, openPopup }) => {
       position={[shop.coordinates.latitude, shop.coordinates.longitude]}
       animate={true}
     >
-      <Popup className={styles.popup}>
-        <p className={styles.content}>{shop.name}</p>
+      <Popup>
+        <p>{shop.name}</p>
       </Popup>
     </BaseMarker>
   );

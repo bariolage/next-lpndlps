@@ -2,13 +2,23 @@ import { MapContainer, TileLayer, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
-import { useAppContext } from "../../pages/_app";
+import { useAppContext } from "../pages/_app";
 import Marker from "./marker";
-import styles from "./leafmap.module.css";
+import styled from "styled-components";
+
+const Wrap = styled.div`
+  width: 50%;
+  height: 40rem;
+  @media (max-width: 48rem) {
+    width: 100%;
+    max-height: 70vh;
+  }
+`;
+
 const Map = ({ shops }) => {
   const { viewport } = useAppContext();
   return (
-    <div className={styles.map}>
+    <Wrap>
       <MapContainer
         center={[viewport.lat, viewport.lng]}
         zoom={10}
@@ -37,7 +47,7 @@ const Map = ({ shops }) => {
           );
         })}
       </MapContainer>
-    </div>
+    </Wrap>
   );
 };
 
