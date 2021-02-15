@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useAmp } from "next/amp";
 import styled from "styled-components";
 
 const Wrap = styled.section`
@@ -23,16 +22,10 @@ const Figure = styled.figure`
 `;
 
 export default function Cover({ image, about }) {
-  const isAmp = useAmp();
-
   return (
     <Wrap>
       <Figure>
-        {isAmp ? (
-          <amp-img alt="image" src={image} alt="a cool image" layout="fill" />
-        ) : (
-          <Image alt="image" src={image} layout="fill" objectFit="cover" />
-        )}
+        <Image alt="image" src={image} layout="fill" objectFit="cover" />
       </Figure>
     </Wrap>
   );

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useAppContext } from "../pages/_app";
 import Navigation from "./navigation";
-import { useAmp } from "next/amp";
 import styled from "styled-components";
 
 const Wrap = styled.header`
@@ -59,7 +58,6 @@ const Title = styled.a`
   }
 `;
 const Header = (props) => {
-  const isAmp = useAmp();
   const { menuIsOpen, toggle } = useAppContext();
   const router = useRouter();
   const home = router.pathname === "/";

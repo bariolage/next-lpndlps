@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Text from "./text";
-import { useAmp } from "next/amp";
 import styled from "styled-components";
 
 const Wrap = styled.footer`
@@ -48,25 +47,14 @@ const Button = styled.svg`
 `;
 
 const Footer = ({ contactData }) => {
-  const isAmp = useAmp();
-
   return (
     <Wrap id="contact">
       <Figure>
-        {isAmp ? (
-          <amp-img
-            alt="image"
-            src={contactData.frontmatter.cover}
-            alt="a cool image"
-            layout="fill"
-          />
-        ) : (
-          <Image
-            src={contactData.frontmatter.cover}
-            layout="fill"
-            objectFit="contain"
-          />
-        )}
+        <Image
+          src={contactData.frontmatter.cover}
+          layout="fill"
+          objectFit="contain"
+        />
       </Figure>
       <Text body={contactData.content} />
       <a href="#header">
