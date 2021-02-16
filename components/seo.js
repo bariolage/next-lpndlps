@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function SEO({ globalData, title }) {
   const seo = {
     title: globalData.name + " - " + title || globalData.name,
-    image: globalData.image,
+    image: globalData.banner.image,
     description: globalData.description,
     url: globalData.url,
   };
@@ -14,7 +14,7 @@ export default function SEO({ globalData, title }) {
       "@type": "Bakery",
       name: globalData.name,
       description: globalData.description,
-      image: globalData.banner,
+      image: globalData.banner.image,
       url: globalData.url,
       telephone: globalData.telephone[0],
       address: {
@@ -40,7 +40,7 @@ export default function SEO({ globalData, title }) {
         />
         <meta name="description" content={globalData.description} />
         <title>{seo.title}</title>
-
+        <meta name="image" content={seo.image} />
         <link rel="manifest" href="/manifest.json" />
         <link
           href="/icons/favicon-16x16.png"
