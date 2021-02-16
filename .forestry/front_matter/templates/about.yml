@@ -17,6 +17,12 @@ fields:
 - name: section
   type: field_group_list
   fields:
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Titre
+    default: section
   - name: cover
     type: file
     config:
@@ -34,7 +40,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: title
   label: Sections
 pages:
 - content/pages/about.md
