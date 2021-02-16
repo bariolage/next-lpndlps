@@ -1,8 +1,5 @@
 ---
 title: Notre Histoire
-images:
-- "/pndsl-carte.jpeg"
-- "/visuel5enfour.jpg"
 message: Le Pain des Lou est une entreprise militante basée à Plougastel-Daoulas depuis
   2012 et coopérative depuis 2019. Depuis nos débuts, nous travaillons sous la mention
   Nature&Progrès, le plus exigeant des cahiers des charges biologiques et nous engageons
@@ -16,9 +13,9 @@ section:
     un four à chauffe directe  \neau filtrée (système Berkey)\n\nLa longue fermentation
     au levain naturel permet de pré-digérer le blé afin d’assimiler tous ses nutriments
     et de conserver notre pain au moins une semaine."
-  cover: "/croquis boulange JL-72px.jpg"
+  cover: "/images/croquis boulange JL-72px.jpg"
 - title: Nature & Progrès
-  cover: "/mains-9-12cmnoir et bc-100px.jpg"
+  cover: "/images/mains-9-12cmnoir et bc-100px.jpg"
   content: |-
     ### Nature&Progrès
 

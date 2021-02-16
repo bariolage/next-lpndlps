@@ -14,7 +14,7 @@ const Wrap = styled.section`
     max-width: 100%;
     height: fit-content;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 `;
 

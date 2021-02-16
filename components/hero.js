@@ -21,7 +21,7 @@ const Wrap = styled.section`
   }
 `;
 
-const Title = styled.h2`
+const H2 = styled.h2`
   margin: 0;
   padding: 3rem 0;
   font-size: 3rem;
@@ -45,7 +45,7 @@ const Message = styled(ReactMarkdown)`
 const Hero = ({ title, message }) => {
   return (
     <Wrap>
-      <Title>{title}</Title>
+      <H2>{title}</H2>
       <Message source={message} />
     </Wrap>
   );

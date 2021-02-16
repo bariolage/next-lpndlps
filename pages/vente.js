@@ -6,6 +6,8 @@ import Cover from "../components/cover";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
 import Page from "../components/page";
+import { getGlobalData } from "../lib/getGlobalData";
+import SEO from "../components/seo";
 
 export async function getStaticProps() {
   const content = await import(`../content/pages/vente.md`);
@@ -28,25 +30,20 @@ export async function getStaticProps() {
     });
   });
 
-  const infos = await import(`../content/infos.json`);
-  const contact = await import(`../content/pages/contact.md`);
-  const contactData = matter(contact.default);
+  const globalData = await getGlobalData();
+
   return {
     props: {
       body: data.content,
       data: data.data,
       table,
       shops,
-      infos: infos.default,
-      contact: {
-        frontmatter: contactData.data,
-        content: contactData.content,
-      },
+      globalData,
     },
   };
 }
 
-export default function Vente({ body, data, table, shops, infos, contact }) {
+export default function Vente({ body, data, table, shops, globalData }) {
   const Map = useMemo(
     () =>
       dynamic(() => import("../components/leafmap"), {
@@ -56,7 +53,8 @@ export default function Vente({ body, data, table, shops, infos, contact }) {
     []
   );
   return (
-    <Page infos={infos} contact={contact}>
+    <Page globalData={globalData}>
+      <SEO globalData={globalData} title={data.title} />
       <Hero title={data.title} message={data.message} />
       <Table data={table} withMap="true" />
       <Map shops={shops} />

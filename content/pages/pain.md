@@ -2,9 +2,9 @@
 title: Nos Pains
 message: Nous produisons **deux types de pains**, lesquels se déclinent en plusieurs
   variantes.
-cover: "/Morgan 20 par 20-300px.jpg"
+cover: "/images/Morgan 20 par 20-300px.jpg"
 images:
-- "/Morgan 20 par 20-300px.jpg"
+- "/images/Morgan 20 par 20-300px.jpg"
 carte:
 - title: FROMENT COMPLET
   items:
@@ -18,10 +18,10 @@ carte:
   - Raisins
   - Noix
 gallery:
-- "/pains-boule-nature.jpg"
-- "/sarrasin-nature.jpg"
-- "/sarrasin-noix.jpg"
-- "/sarrasin-raisins.jpeg"
+- "/images/pains-boule-nature.jpg"
+- "/images/sarrasin-nature.jpg"
+- "/images/sarrasin-noix.jpg"
+- "/images/sarrasin-raisins.jpeg"
 bg: "#007d96e6"
 
 ---

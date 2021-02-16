@@ -2,6 +2,8 @@
   "siteTitle": "Le Pain des Lou",
   "headline": "Fournil artisanal Nature & Progrès",
   "logo": "/pndsl-carte.jpeg",
+  "email": "",
+  "phone": ["0123456789", "987654321"],
   "navigation": [
     { "name": "Qui Sommes-nous ?", "slug": "/" },
     {

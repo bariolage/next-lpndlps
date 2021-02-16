@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { useAppContext } from "../pages/_app";
 import Navigation from "./navigation";
 import styled from "styled-components";
 
@@ -57,27 +55,24 @@ const Title = styled.a`
     margin: 0;
   }
 `;
-const Header = (props) => {
-  const { menuIsOpen, toggle } = useAppContext();
-  const router = useRouter();
-  const home = router.pathname === "/";
+const Header = ({ globalData }) => {
   return (
     <Wrap id="header">
       <Figure>
         <Image
           alt="image"
-          src="/a_la_craie-72px.jpg"
+          src={globalData.cover}
           layout="fill"
           objectFit="cover"
         />
       </Figure>
       <Link href="/">
         <Title>
-          <h1>{props.title}</h1>
-          <p>{props.headline}</p>
+          <h1>{globalData.name}</h1>
+          <p>{globalData.description}</p>
         </Title>
       </Link>
-      <Navigation navigation={props.navigation} />
+      <Navigation navigation={globalData.navigation} />
     </Wrap>
   );
 };

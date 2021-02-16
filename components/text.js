@@ -9,10 +9,11 @@ const Wrap = styled.section`
   font-weight: 500;
   position: relative;
   color: var(--color-white);
-  background-color: var(--color-primary);
+  background-color: ${(props) =>
+    props.bg == "dark" ? "var(--color-black)" : "var(--color-primary)"};
   padding: 4rem;
   width: 50%;
-  min-height: 32rem;
+  min-height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +71,7 @@ const Wrap = styled.section`
   }
 `;
 
-const Text = ({ body, id, full }) => {
+const Text = ({ body, id, full, bg }) => {
   const renderers = {
     image: (props) => {
       return (
@@ -101,7 +102,7 @@ const Text = ({ body, id, full }) => {
     },
   };
   return (
-    <Wrap id={id} full={full}>
+    <Wrap id={id} full={full} bg={bg}>
       <ReactMarkdown
         plugins={[unwrapImages]}
         source={body}

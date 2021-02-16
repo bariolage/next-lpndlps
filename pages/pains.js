@@ -5,30 +5,28 @@ import Table from "../components/table";
 import Hero from "../components/hero";
 import Cover from "../components/cover";
 import Page from "../components/page";
+import { getGlobalData } from "../lib/getGlobalData";
+import SEO from "../components/seo";
 
 export async function getStaticProps() {
   const content = await import(`../content/pages/pain.md`);
   const data = matter(content.default);
 
-  const infos = await import(`../content/infos.json`);
-  const contact = await import(`../content/pages/contact.md`);
-  const contactData = matter(contact.default);
+  const globalData = await getGlobalData();
+
   return {
     props: {
       body: data.content,
       data: data.data,
-      infos: infos.default,
-      contact: {
-        frontmatter: contactData.data,
-        content: contactData.content,
-      },
+      globalData,
     },
   };
 }
 
-export default function Pains({ body, data, infos, contact }) {
+export default function Pains({ body, data, globalData }) {
   return (
-    <Page infos={infos} contact={contact}>
+    <Page globalData={globalData}>
+      <SEO globalData={globalData} title={data.title} />
       <Hero title={data.title} message={data.message} />
       <Table data={data.carte} />
       <Cover image={data.cover} />

@@ -1,6 +1,4 @@
 import "../styles/globals.css";
-import Page from "../components/page";
-import matter from "gray-matter";
 import React, { useContext, useState } from "react";
 import "typeface-dosis";
 

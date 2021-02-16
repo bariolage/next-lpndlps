@@ -23,16 +23,12 @@ const Main = styled.main`
   }
 `;
 
-const Page = ({ infos, contact, children }) => {
+const Page = ({ infos, globalData, children }) => {
   return (
     <Fragment>
-      <Header
-        title={infos.siteTitle}
-        headline={infos.headline}
-        navigation={infos.navigation}
-      />
+      <Header globalData={globalData} />
       <Main>{children}</Main>
-      <Footer contactData={contact} />
+      <Footer globalData={globalData} />
     </Fragment>
   );
 };

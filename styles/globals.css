@@ -11,8 +11,8 @@
   --sm-height: 10rem;
   --color-dark: #252525;
   --color-white: #fefef6;
-  --color-primary: rgba(0, 125, 150, 1);
-  --color-primary-w-opacity: #007d96e6;
+  --color-primary: #b00a00;
+  --color-primary-w-opacity: #b00a00;
   --color-dark-w-opacity: rgba(37, 37, 37, 0.9);
 }
 @media (max-width: 48rem) {

@@ -2,9 +2,9 @@
 title: Nos Points De Vente
 message: Nous proposons nos pains en vente directe ([infos](#infos)) et chez nos partenaires
   (ci-dessous).
-cover: "/four_et_labo.jpg"
+cover: "/images/four_et_labo.jpg"
 images:
-- "/four_et_labo.jpg"
+- "/images/four_et_labo.jpg"
 pos:
 - title: vente directe
   items:
