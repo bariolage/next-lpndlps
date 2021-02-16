@@ -2,11 +2,7 @@ import "../styles/globals.css";
 import React, { useContext, useState } from "react";
 import "typeface-dosis";
 
-export function reportWebVitals(metric) {
-  console.log(metric);
-}
-
-export const Context = React.createContext();
+/* export const Context = React.createContext();
 
 export function useAppContext() {
   const context = useContext(Context);
@@ -16,15 +12,15 @@ export function useAppContext() {
   }
 
   return context;
-}
+} */
 
 function MyApp({ Component, pageProps }) {
-  const [menuIsOpen, toggle] = useState(false);
+  /* const [menuIsOpen, toggle] = useState(false);
   const viewportInit = { lat: 48.35261871558314, lng: -4.4191839176185725 };
-  const [viewport, setViewport] = useState(viewportInit);
+  const [viewport, setViewport] = useState(viewportInit); */
 
   return (
-    <Context.Provider
+    /*  <Context.Provider
       value={{
         menuIsOpen,
         toggle,
@@ -32,9 +28,9 @@ function MyApp({ Component, pageProps }) {
         setViewport,
         viewportInit,
       }}
-    >
-      <Component {...pageProps} />
-    </Context.Provider>
+    > */
+    <Component {...pageProps} />
+    /* </Context.Provider> */
   );
 }
 

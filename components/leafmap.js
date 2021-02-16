@@ -5,7 +5,6 @@ import "leaflet-defaulticon-compatibility";
 import { useAppContext } from "../pages/_app";
 import Marker from "./marker";
 import styled from "styled-components";
-
 const Wrap = styled.div`
   width: 50%;
   height: 40rem;
@@ -15,8 +14,8 @@ const Wrap = styled.div`
   }
 `;
 
-const Map = ({ shops }) => {
-  const { viewport } = useAppContext();
+const Map = ({ shops, viewport }) => {
+  //const [viewport] = usePosition();
   return (
     <Wrap>
       <MapContainer

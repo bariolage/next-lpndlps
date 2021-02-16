@@ -1,6 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import { useAppContext } from "../pages/_app";
 import styled from "styled-components";
+//import { usePosition } from "../lib/usePosition";
 
 const Wrap = styled.section`
   width: 50%;
@@ -68,9 +69,9 @@ const Button = styled.button`
   }
 `;
 
-const Table = ({ data, withMap }) => {
-  const { viewportInit, viewport, setViewport } = useAppContext();
-
+const Table = ({ data, withMap, viewportInit, viewport, setViewport }) => {
+  //const { viewportInit, viewport, setViewport } = useAppContext();
+  //const [viewportInit, viewport, setViewport] = usePosition();
   return (
     <Wrap>
       {data.map((e, i) => (

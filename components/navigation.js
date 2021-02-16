@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useAppContext } from "../pages/_app";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -53,7 +52,6 @@ const Item = styled.li`
 `;
 
 const Navigation = (props) => {
-  const { menuIsOpen, toggle } = useAppContext();
   const router = useRouter();
   return (
     <>
@@ -64,7 +62,6 @@ const Navigation = (props) => {
               <Item
                 isActive={router.pathname === item.slug}
                 key={`nav-${item.slug}`}
-                onClick={() => toggle(false)}
               >
                 <Link href={item.slug} passHref>
                   <a>
