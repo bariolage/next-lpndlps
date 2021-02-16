@@ -5,11 +5,13 @@ fields:
 - type: text
   name: title
   label: Titre
+  config:
+    required: true
 - name: message
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: true
     schema:
       format: markdown
@@ -17,6 +19,12 @@ fields:
 - name: section
   type: field_group_list
   fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Titre
+    default: section
   - name: cover
     type: file
     config:
@@ -26,7 +34,7 @@ fields:
     type: textarea
     default: ''
     config:
-      required: false
+      required: true
       wysiwyg: true
       schema:
         format: markdown
@@ -34,7 +42,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: title
   label: Sections
 pages:
 - content/pages/about.md

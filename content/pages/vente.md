@@ -55,11 +55,6 @@ pos:
     coordinates:
       latitude: 48.39931493067537
       longitude: -4.472198844606354
-  - name: Biomonde
-    address: Route de Sainte-Anne du Portzic, 29200 Brest
-    coordinates:
-      latitude: 48.36746107232152
-      longitude: -4.546801302277676
 bg: "#007d96e6"
 
 ---
