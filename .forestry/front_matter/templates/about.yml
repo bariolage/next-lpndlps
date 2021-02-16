@@ -5,11 +5,13 @@ fields:
 - type: text
   name: title
   label: Titre
+  config:
+    required: true
 - name: message
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: true
     schema:
       format: markdown
@@ -20,7 +22,7 @@ fields:
   - name: title
     type: text
     config:
-      required: false
+      required: true
     label: Titre
     default: section
   - name: cover
@@ -32,7 +34,7 @@ fields:
     type: textarea
     default: ''
     config:
-      required: false
+      required: true
       wysiwyg: true
       schema:
         format: markdown
