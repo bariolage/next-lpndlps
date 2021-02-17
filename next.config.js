@@ -1,7 +1,8 @@
-const withOffline = require("next-offline");
+const withPWA = require("next-pwa");
 
 // your next.js configs
 const nextConfig = {
+  future: { webpack5: true },
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.md$/,
@@ -9,6 +10,11 @@ const nextConfig = {
     });
     return config;
   },
+  pwa: {
+    dest: "public",
+    register: true,
+    skipWaiting: true,
+  },
 };
 
-module.exports = withOffline(nextConfig);
+module.exports = withPWA(nextConfig);

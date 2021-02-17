@@ -101,6 +101,10 @@ const BottomBar = styled.div`
       color: var(--color-primary);
     }
   }
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 const Footer = ({ globalData }) => {
   return (
