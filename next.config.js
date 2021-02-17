@@ -1,5 +1,5 @@
 const withPWA = require("next-pwa");
-
+const runtimeCaching = require("next-pwa/cache");
 // your next.js configs
 const nextConfig = {
   future: { webpack5: true },
@@ -14,6 +14,7 @@ const nextConfig = {
     dest: "public",
     register: true,
     skipWaiting: true,
+    runtimeCaching,
   },
 };
 

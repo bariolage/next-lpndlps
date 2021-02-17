@@ -1,4 +1,5 @@
 ---
+url: https://next-lpndlps-next.vercel.app
 name: Le Pain Des Lou
 description: "Fournil artisanal Nature & Progrès"
 cover: "/images/a_la_craie-72px.jpg"

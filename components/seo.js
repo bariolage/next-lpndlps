@@ -1,11 +1,14 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 export default function SEO({ globalData, title }) {
+  const canURL = globalData.url + useRouter().pathname;
+
   const seo = {
     title: globalData.name + " - " + title || globalData.name,
     image: globalData.banner.image,
     description: globalData.description,
-    url: globalData.url,
+    url: canURL,
   };
 
   const schema = [
@@ -44,6 +47,7 @@ export default function SEO({ globalData, title }) {
         /> */}
         <meta name="description" content={globalData.description} />
         <title>{seo.title}</title>
+        <link rel="canonical" href={canURL} />
         <meta name="image" content={seo.image} />
         <link rel="manifest" href="/manifest.json" />
         <link
