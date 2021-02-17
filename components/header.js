@@ -21,7 +21,6 @@ const Wrap = styled.header`
 
   @media (max-width: 48rem) {
     width: 100vw;
-    height: 32rem;
     padding: 2rem 1rem;
   }
 `;

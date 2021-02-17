@@ -14,7 +14,7 @@ const Wrap = styled.section`
 
   @media (max-width: 48rem) {
     margin: 0;
-    margin-top: 32rem;
+    margin-top: var(--header-height);
     width: 100vw;
     height: fit-content;
     padding: 3rem 1rem;

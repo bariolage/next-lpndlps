@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 @media (max-width: 48rem) {
   :root {
     --big-height: 20rem;
+    --header-height: 24rem;
   }
 }
 html,

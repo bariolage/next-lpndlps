@@ -14,7 +14,6 @@ const Nav = styled.nav`
 
   @media (max-width: 48rem) {
     width: 100vw;
-    height: 32rem;
     padding: 3rem 1rem;
   }
 `;
