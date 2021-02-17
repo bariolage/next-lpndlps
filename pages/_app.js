@@ -1,49 +1,60 @@
-import "../styles/globals.css";
-import React, { useContext, useState } from "react";
+import React from "react";
 import "typeface-dosis";
-
-/* export const Context = React.createContext();
-
-export function useAppContext() {
-  const context = useContext(Context);
-
-  if (!context) {
-    console.error("Error deploying App Context!!!");
+import { createGlobalStyle } from "styled-components";
+const GlobalStyle = createGlobalStyle`
+ :root {
+  --font-body: Dosis, Mukta, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-heading: Dosis, Boogaloo, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  --space: 2rem;
+  --header-height: 32rem;
+  --flex: 1;
+  --lg-height: 32rem;
+  --sm-height: 10rem;
+  --color-dark: #252525;
+  --color-white: #fefef6;
+  --color-primary: #c65300;
+  --color-primary-w-opacity: #c65300;
+  --color-dark-w-opacity: rgba(37, 37, 37, 0.9);
+}
+@media (max-width: 48rem) {
+  :root {
+    --big-height: 20rem;
   }
-
-  return context;
-} */
-
-function MyApp({ Component, pageProps }) {
-  /* const [menuIsOpen, toggle] = useState(false);
-  const viewportInit = { lat: 48.35261871558314, lng: -4.4191839176185725 };
-  const [viewport, setViewport] = useState(viewportInit); */
-
-  return (
-    /*  <Context.Provider
-      value={{
-        menuIsOpen,
-        toggle,
-        viewport,
-        setViewport,
-        viewportInit,
-      }}
-    > */
-    <Component {...pageProps} />
-    /* </Context.Provider> */
-  );
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-dark);
+  color: var(--color-dark);
+  letter-spacing: 0.125rem;
+  line-height: 1.5rem;
+  font-weight: 500;
 }
 
-// MyApp.getInitialProps = async () => {
-//   const infos = await import(`../content/infos.json`);
-//   const content = await import(`../content/pages/contact.md`);
-//   const data = matter(content.default);
-//   return {
-//     pageProps: {
-//       infos: infos.default,
-//       contactData: { frontmatter: data.data, content: data.content },
-//     },
-//   };
-// };
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  border: 10x solid red;
+}
+
+`;
+
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <GlobalStyle />
+      <Component {...pageProps} />
+    </>
+  );
+}
 
 export default MyApp;
