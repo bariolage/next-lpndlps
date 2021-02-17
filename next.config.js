@@ -9,7 +9,7 @@ const nextConfig = {
       use: "raw-loader",
     });
     return config;
-  },
+  } /* 
   images: {
     imageSizes: [],
     deviceSizes: [
@@ -31,7 +31,7 @@ const nextConfig = {
       2048,
       3840,
     ],
-  },
+  }, */,
   pwa: {
     dest: "public",
     register: true,

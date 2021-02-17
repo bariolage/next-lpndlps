@@ -43,7 +43,7 @@ export default function SEO({ globalData, title }) {
         /> */}
         <meta
           name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          content="width=device-width,initial-scale=1,maximum-scale=5.0, minimum-scale=1"
         />
         <meta name="description" content={globalData.description} />
         <title>{seo.title}</title>
