@@ -13,6 +13,7 @@
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "next": "canary",
+    "next-offline": "^5.0.3",
     "raw-loader": "^4.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -25,7 +26,6 @@
   "devDependencies": {
     "babel-plugin-styled-components": "latest",
     "express": "^4.17.1",
-    "next-offline": "^5.0.3",
     "webpack": "^5.22.0"
   }
 }
