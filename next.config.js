@@ -1,4 +1,7 @@
-module.exports = {
+const withOffline = require("next-offline");
+
+// your next.js configs
+const nextConfig = {
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.md$/,
@@ -7,3 +10,5 @@ module.exports = {
     return config;
   },
 };
+
+module.exports = withOffline(nextConfig);

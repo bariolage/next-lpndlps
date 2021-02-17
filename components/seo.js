@@ -36,8 +36,12 @@ export default function SEO({ globalData, title }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta
           name="viewport"
-          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"
         />
+        {/* <meta
+          name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+        /> */}
         <meta name="description" content={globalData.description} />
         <title>{seo.title}</title>
         <meta name="image" content={seo.image} />
@@ -54,7 +58,7 @@ export default function SEO({ globalData, title }) {
           type="image/png"
           sizes="32x32"
         />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <link rel="apple-touch-icon" href="/icons/icon-96x96.png"></link>
         <meta name="theme-color" content="#b00a00" />
 
         {/* OpenGraph tags */}

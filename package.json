@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server": "npm run build && NODE_ENV=production node server.js"
   },
   "dependencies": {
     "gray-matter": "^4.0.2",
@@ -22,6 +23,9 @@
     "typeface-dosis": "^1.1.13"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "latest"
+    "babel-plugin-styled-components": "latest",
+    "express": "^4.17.1",
+    "next-offline": "^5.0.3",
+    "webpack": "^5.22.0"
   }
 }
