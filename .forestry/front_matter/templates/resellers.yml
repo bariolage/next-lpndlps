@@ -1,10 +1,26 @@
 ---
-label: Resellers
+label: Shops
 hide_body: false
 fields:
 - type: text
   name: title
   label: Titre
+- name: cover
+  type: field_group
+  config: {}
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Image
+  - name: alt
+    type: text
+    config:
+      required: true
+    label: Texte alternatif
+    default: image
+  label: Image de couverture
 - name: message
   type: textarea
   default: ''
@@ -14,11 +30,6 @@ fields:
     schema:
       format: markdown
   label: Introduction
-- name: cover
-  type: file
-  config:
-    maxSize: 64
-  label: Image de couverture
 - name: pos
   type: field_group_list
   fields:
