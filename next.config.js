@@ -10,13 +10,13 @@ const nextConfig = {
     });
     return config;
   },
-  /* pwa: {
+  pwa: {
     dest: "public",
     register: true,
     skipWaiting: true,
     runtimeCaching,
-  }, */
+  },
 };
 
-module.exports = nextConfig;
-//module.exports = withPWA(nextConfig);
+//module.exports = nextConfig;
+module.exports = withPWA(nextConfig);
