@@ -13,6 +13,10 @@ sections:
 - type: document
   path: content/pages/vente.md
   label: Points de vente
+- type: document
+  path: content/pages/infos.md
+  label: Infos/Contact
+  match: "**/*"
 upload_dir: public
 public_path: "/public"
 front_matter_path: ''
