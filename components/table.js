@@ -1,7 +1,5 @@
 import ReactMarkdown from "react-markdown";
-import { useAppContext } from "../pages/_app";
 import styled from "styled-components";
-//import { usePosition } from "../lib/usePosition";
 
 const Wrap = styled.section`
   width: 50%;

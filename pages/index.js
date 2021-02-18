@@ -10,7 +10,7 @@ import SEO from "../components/seo";
 const Cover = dynamic(() => import("../components/cover"));
 
 export async function getStaticProps() {
-  const content = await import(`../content/pages/about.md`);
+  const content = await import(`../content/about.md`);
   const data = matter(content.default);
 
   const globalData = await getGlobalData();

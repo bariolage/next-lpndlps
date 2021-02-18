@@ -10,7 +10,7 @@ import { getGlobalData } from "../lib/getGlobalData";
 import SEO from "../components/seo";
 
 export async function getStaticProps() {
-  const content = await import(`../content/pages/vente.md`);
+  const content = await import(`../content/vente.md`);
   const data = matter(content.default);
 
   const table = [];

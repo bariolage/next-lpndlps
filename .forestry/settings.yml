@@ -1,24 +1,24 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
-webhook_url: 
+admin_path:
+webhook_url:
 sections:
-- type: document
-  path: content/pages/about.md
-  label: À Propos
-- type: document
-  path: content/pages/pain.md
-  label: Pains
-- type: document
-  path: content/pages/vente.md
-  label: Points de vente
-- type: document
-  path: content/pages/infos.md
-  label: Infos/Contact
+  - type: document
+    path: content/about.md
+    label: À Propos
+  - type: document
+    path: content/pain.md
+    label: Pains
+  - type: document
+    path: content/vente.md
+    label: Points de vente
+  - type: document
+    path: content/infos.md
+    label: Infos/Contact
 upload_dir: public
 public_path: "/public"
-front_matter_path: ''
+front_matter_path: ""
 use_front_matter_path: false
 file_template: ":filename:"
 build:

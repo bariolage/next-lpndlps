@@ -1,6 +1,7 @@
 import React from "react";
 import "typeface-dosis";
 import { createGlobalStyle } from "styled-components";
+
 const GlobalStyle = createGlobalStyle`
  :root {
   --font-body: Dosis, Mukta, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -15,9 +16,7 @@ const GlobalStyle = createGlobalStyle`
   --sm-height: 10rem;
   --color-dark: #252525;
   --color-white: #fefef6;
-  --color-primary: #c65300;
-  --color-primary-w-opacity: #c65300;
-  --color-dark-w-opacity: rgba(37, 37, 37, 0.9);
+  --color-primary: #A72100;
 }
 @media (max-width: 48rem) {
   :root {
@@ -46,7 +45,6 @@ a {
   box-sizing: border-box;
   border: 10x solid red;
 }
-
 `;
 
 function MyApp({ Component, pageProps }) {

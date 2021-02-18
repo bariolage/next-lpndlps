@@ -9,7 +9,7 @@ import { getGlobalData } from "../lib/getGlobalData";
 import SEO from "../components/seo";
 
 export async function getStaticProps() {
-  const content = await import(`../content/pages/pain.md`);
+  const content = await import(`../content/pain.md`);
   const data = matter(content.default);
 
   const globalData = await getGlobalData();

@@ -2,7 +2,6 @@ import { MapContainer, TileLayer, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
-import { useAppContext } from "../pages/_app";
 import Marker from "./marker";
 import styled from "styled-components";
 const Wrap = styled.div`
@@ -15,7 +14,6 @@ const Wrap = styled.div`
 `;
 
 const Map = ({ shops, viewport }) => {
-  //const [viewport] = usePosition();
   return (
     <Wrap>
       <MapContainer

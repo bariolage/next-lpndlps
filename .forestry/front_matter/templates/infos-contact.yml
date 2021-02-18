@@ -2,82 +2,82 @@
 label: Infos/Contact
 hide_body: false
 fields:
-- type: field_group
-  name: config
-  fields:
+  - type: field_group
+    name: config
+    fields:
+      - type: text
+        name: name
+        label: Titre du site
+      - type: text
+        name: description
+        label: Description du site
+      - type: field_group
+        name: cover
+        label: Image de couverture du site
+        fields:
+          - type: file
+            name: image
+            label: image
+          - type: text
+            name: alt
+            label: alt
+      - type: text
+        name: url
+        label: Adresse du site
+      - type: field_group_list
+        name: navigation
+        label: Navigation
+        fields:
+          - type: text
+            name: name
+            label: name
+          - type: text
+            name: slug
+            label: slug
+    label: Configuration
   - type: text
-    name: name
-    label: Titre du site
+    name: title
+    label: Titre
   - type: text
     name: description
-    label: Description du site
+    label: Description
   - type: field_group
-    name: cover
-    label: Image de couverture du site
+    name: banner
+    label: Bannière
     fields:
-    - type: file
-      name: image
-      label: image
-    - type: text
-      name: alt
-      label: alt
+      - type: file
+        name: image
+        label: image
+      - type: text
+        name: alt
+        label: alt
+      - type: number
+        name: width
+        label: width
+      - type: number
+        name: height
+        label: height
   - type: text
-    name: url
-    label: Adresse du site
-  - type: field_group_list
-    name: navigation
-    label: Navigation
+    name: mail
+    label: Adresse mail
+  - type: list
+    name: telephone
+    label: Téléphones
+  - type: field_group
+    name: address
+    label: Adresse postale
     fields:
-    - type: text
-      name: name
-      label: name
-    - type: text
-      name: slug
-      label: slug
-  label: Configuration
-- type: text
-  name: title
-  label: Titre
-- type: text
-  name: description
-  label: Description
-- type: field_group
-  name: banner
-  label: Bannière
-  fields:
-  - type: file
-    name: image
-    label: image
-  - type: text
-    name: alt
-    label: alt
-  - type: number
-    name: width
-    label: width
-  - type: number
-    name: height
-    label: height
-- type: text
-  name: mail
-  label: Adresse mail
-- type: list
-  name: telephone
-  label: Téléphones
-- type: field_group
-  name: address
-  label: Adresse postale
-  fields:
-  - type: text
-    name: streetAddress
-    label: Numéro et rue
-  - type: text
-    name: addressLocality
-    label: Ville
-  - type: text
-    name: postalCode
-    label: Code postal
-  - type: text
-    name: addressCountry
-    label: Pays
+      - type: text
+        name: streetAddress
+        label: Numéro et rue
+      - type: text
+        name: addressLocality
+        label: Ville
+      - type: text
+        name: postalCode
+        label: Code postal
+      - type: text
+        name: addressCountry
+        label: Pays
 pages:
-- content/pages/infos.md
+  - content/infos.md

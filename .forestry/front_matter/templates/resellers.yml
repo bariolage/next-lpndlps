@@ -2,78 +2,78 @@
 label: Shops
 hide_body: false
 fields:
-- type: text
-  name: title
-  label: Titre
-- name: cover
-  type: include
-  config: {}
-  template: image-de-couverture
-  label: Image de couverture
-- name: message
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Introduction
-- name: pos
-  type: field_group_list
-  fields:
-  - name: title
-    type: text
+  - type: text
+    name: title
+    label: Titre
+  - name: cover
+    type: include
+    config: {}
+    template: image-de-couverture
+    label: Image de couverture
+  - name: message
+    type: textarea
+    default: ""
     config:
       required: false
-    label: Catégorie
-  - name: items
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Introduction
+  - name: pos
     type: field_group_list
     fields:
-    - name: name
-      type: text
-      config:
-        required: false
-      label: Nom
-    - name: address
-      type: text
-      config:
-        required: false
-      label: Adresse
-    - name: coordinates
-      type: field_group
-      config: {}
-      fields:
-      - name: latitude
-        type: number
-        label: Latitude
-        description: ''
-        default: 0
-        required: true
+      - name: title
+        type: text
         config:
-          min: 
-          max: 
-          step: 
-      - name: longitude
-        type: number
-        label: Longitude
-        description: ''
-        default: 0
-        required: true
+          required: false
+        label: Catégorie
+      - name: items
+        type: field_group_list
+        fields:
+          - name: name
+            type: text
+            config:
+              required: false
+            label: Nom
+          - name: address
+            type: text
+            config:
+              required: false
+            label: Adresse
+          - name: coordinates
+            type: field_group
+            config: {}
+            fields:
+              - name: latitude
+                type: number
+                label: Latitude
+                description: ""
+                default: 0
+                required: true
+                config:
+                  min:
+                  max:
+                  step:
+              - name: longitude
+                type: number
+                label: Longitude
+                description: ""
+                default: 0
+                required: true
+                config:
+                  min:
+                  max:
+                  step:
+            label: Coordonnées
         config:
-          min: 
-          max: 
-          step: 
-      label: Coordonnées
+          min:
+          max:
+          labelField:
+        label: Points de Vente
     config:
-      min: 
-      max: 
-      labelField: 
-    label: Points de Vente
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: Carte des points de vente
+      min:
+      max:
+      labelField:
+    label: Carte des points de vente
 pages:
-- content/pages/vente.md
+  - content/vente.md
