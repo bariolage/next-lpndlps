@@ -1,0 +1,85 @@
+---
+label: Infos
+hide_body: false
+fields:
+- type: field_group
+  name: config
+  label: config
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: description
+    label: description
+  - type: field_group
+    name: cover
+    label: cover
+    fields:
+    - type: file
+      name: image
+      label: image
+    - type: text
+      name: alt
+      label: alt
+  - type: text
+    name: url
+    label: url
+  - type: field_group_list
+    name: navigation
+    label: navigation
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: slug
+      label: slug
+- type: field_group
+  name: contact
+  label: contact
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: message
+    label: message
+  - type: field_group
+    name: banner
+    label: banner
+    fields:
+    - type: file
+      name: image
+      label: image
+    - type: text
+      name: alt
+      label: alt
+    - type: number
+      name: width
+      label: width
+    - type: number
+      name: height
+      label: height
+  - type: text
+    name: mail
+    label: mail
+  - type: list
+    name: telephone
+    label: telephone
+  - type: field_group
+    name: address
+    label: address
+    fields:
+    - type: text
+      name: streetAddress
+      label: streetAddress
+    - type: text
+      name: addressLocality
+      label: addressLocality
+    - type: text
+      name: postalCode
+      label: postalCode
+    - type: text
+      name: addressCountry
+      label: addressCountry
