@@ -15,11 +15,12 @@ section:
     et de conserver notre pain au moins une semaine."
   cover:
     image: "/images/croquis boulange JL-72px.jpg"
-    alt: "croquis"
+    alt: croquis
 - title: Nature & Progrès
-  cover: 
+  cover:
     image: "/images/mains-9-12cmnoir et bc-100px.jpg"
-    alit: "croquis"
+    alit: croquis
+    alt: croquis
   content: |-
     ### Nature&Progrès
 
