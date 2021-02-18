@@ -35,12 +35,16 @@ export default function SEO({ globalData, title }) {
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
+        {/* <meta charSet="utf-8" /> */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         {/* <meta
           name="viewport"
           content="width=device-width, initial-scale=0.86, maximum-scale=5.0, minimum-scale=0.86"
         /> */}
+        <meta
+          content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff"
+          httpEquiv="Content-Type"
+        />
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1,maximum-scale=5.0, minimum-scale=1"
