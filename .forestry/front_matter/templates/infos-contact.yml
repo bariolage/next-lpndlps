@@ -35,6 +35,7 @@ fields:
     - type: text
       name: slug
       label: slug
+      hidden: true
 - type: field_group
   name: contact
   label: contact
