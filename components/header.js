@@ -59,19 +59,19 @@ const Header = ({ globalData }) => {
     <Wrap id="header">
       <Figure>
         <Image
-          alt={globalData.cover.alt}
-          src={globalData.cover.image}
+          alt={globalData.config.cover.alt}
+          src={globalData.config.cover.image}
           layout="fill"
           objectFit="cover"
         />
       </Figure>
       <Link href="/">
         <Title>
-          <h1>{globalData.name}</h1>
-          <p>{globalData.description}</p>
+          <h1>{globalData.config.name}</h1>
+          <p>{globalData.config.description}</p>
         </Title>
       </Link>
-      <Navigation navigation={globalData.navigation} />
+      <Navigation navigation={globalData.config.navigation} />
     </Wrap>
   );
 };
