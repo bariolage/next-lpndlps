@@ -9,11 +9,11 @@
     "server": "npm run build && NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "framer-motion": "^3.5.2",
     "gray-matter": "^4.0.2",
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1",
     "next": "canary",
-    "next-pwa": "^5.0.5",
     "raw-loader": "^4.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -24,7 +24,6 @@
     "typeface-dosis": "^1.1.13"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "latest",
-    "webpack": "^5.22.0"
+    "babel-plugin-styled-components": "latest"
   }
 }

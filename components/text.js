@@ -65,7 +65,9 @@ const Wrap = styled.section`
     font-weight: 500;
     position: relative;
     color: var(--color-white);
-    background-color: var(--color-primary);
+    background-color: ${(props) =>
+      props.bg == "dark" ? "var(--color-black)" : "var(--color-primary)"};
+
     padding: 4rem 1rem;
     width: 100%;
   }

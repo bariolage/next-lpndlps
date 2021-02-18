@@ -15,13 +15,13 @@ const Wrap = styled.header`
   align-items: baseline;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 3rem 4rem;
+  padding: 3.25rem 4rem;
   background-color: var(--color-dark);
   color: var(--color-white);
 
   @media (max-width: 48rem) {
     width: 100vw;
-    padding: 2rem 1rem;
+    padding: 2.25rem 1rem;
   }
 `;
 
@@ -54,6 +54,21 @@ const Title = styled.a`
     margin: 0;
   }
 `;
+
+const TopBar = styled.section`
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 0.25rem 4rem;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  @media (max-width: 48rem) {
+    padding: 0.25rem 1rem;
+  }
+`;
+
 const Header = ({ globalData }) => {
   return (
     <Wrap id="header">
@@ -65,6 +80,11 @@ const Header = ({ globalData }) => {
           objectFit="cover"
         />
       </Figure>
+      <TopBar>
+        <Link href="/#annonce">
+          <a>16-0-21 : INFOS</a>
+        </Link>
+      </TopBar>
       <Link href="/">
         <Title>
           <h1>{globalData.config.name}</h1>

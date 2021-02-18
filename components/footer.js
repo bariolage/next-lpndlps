@@ -3,6 +3,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import Link from "next/link";
 import Text from "./text";
+import { useRouter } from "next/router";
 
 const Wrap = styled.footer`
   position: relative;
@@ -84,9 +85,11 @@ const Button = styled.svg`
   height: 3rem;
   width: 3rem;
   margin: 2rem;
-  fill: var(--color-white);
+  fill: var(--color-primary);
+  background-color: transparent;
   &:hover {
     background-color: var(--color-primary);
+    fill: var(--color-white);
   }
 `;
 
@@ -107,9 +110,13 @@ const BottomBar = styled.div`
   }
 `;
 const Footer = ({ globalData }) => {
+  const router = useRouter();
+  const isHome = router.pathname === "/";
   return (
     <Wrap id="contact">
-      <Text fullWith="true" bg="dark" body={globalData.body} />
+      {isHome && (
+        <Text id="annonce" fullWith="true" bg="dark" body={globalData.body} />
+      )}
       <Contact>
         <h2>{globalData.title}</h2>
         <p>{globalData.description}</p>

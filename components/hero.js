@@ -11,7 +11,11 @@ const Wrap = styled.section`
   flex-direction: column;
   justify-content: flex-end;
   padding: 4rem;
-
+  a {
+    padding: 0 0.25rem;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+  }
   @media (max-width: 48rem) {
     margin: 0;
     margin-top: var(--header-height);

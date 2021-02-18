@@ -43,6 +43,7 @@ const Item = styled.li`
     display: block;
     width: 100%;
     padding: 0.25rem;
+    text-decoration: none;
   }
   &:hover {
     color: var(--color-white);
