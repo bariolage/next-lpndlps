@@ -111,8 +111,8 @@ const Footer = ({ globalData }) => {
     <Wrap id="contact">
       <Text fullWith="true" bg="dark" body={globalData.body} />
       <Contact>
-        <h2>{globalData.contact.title}</h2>
-        <p>{globalData.contact.message}</p>
+        <h2>{globalData.title}</h2>
+        <p>{globalData.description}</p>
         <List>
           <Item>
             <Icon
@@ -124,7 +124,7 @@ const Footer = ({ globalData }) => {
               <path fill="none" d="M0 0h24v24H0z" />
               <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm9.06 8.683L5.648 6.238 4.353 7.762l7.72 6.555 7.581-6.56-1.308-1.513-6.285 5.439z" />
             </Icon>
-            <p>{globalData.contact.mail}</p>
+            <p>{globalData.mail}</p>
           </Item>
           <Item>
             <Icon
@@ -137,7 +137,7 @@ const Footer = ({ globalData }) => {
               <path d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z" />
             </Icon>
             <List>
-              {globalData.contact.telephone.map((e, i) => (
+              {globalData.telephone.map((e, i) => (
                 <Item key={e + i}>
                   <p>{e}</p>
                 </Item>
@@ -155,11 +155,11 @@ const Footer = ({ globalData }) => {
               <path d="M18.364 17.364L12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zM12 13a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
             </Icon>
             <p>
-              {globalData.contact.address.streetAddress +
+              {globalData.address.streetAddress +
                 ", " +
-                globalData.contact.address.postalCode +
+                globalData.address.postalCode +
                 " " +
-                globalData.contact.address.addressLocality}
+                globalData.address.addressLocality}
             </p>
           </Item>
         </List>
@@ -167,11 +167,11 @@ const Footer = ({ globalData }) => {
       <Card>
         <Figure>
           <Image
-            src={globalData.contact.banner.image}
-            alt={globalData.contact.banner.alt}
+            src={globalData.banner.image}
+            alt={globalData.banner.alt}
             layout="responsive"
-            width={globalData.contact.banner.width}
-            height={globalData.contact.banner.height}
+            width={globalData.banner.width}
+            height={globalData.banner.height}
           />
         </Figure>
         <BottomBar>

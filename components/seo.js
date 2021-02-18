@@ -6,7 +6,7 @@ export default function SEO({ globalData, title }) {
 
   const seo = {
     title: globalData.config.name + " - " + title || globalData.config.name,
-    image: globalData.contact.banner.image,
+    image: globalData.banner.image,
     description: globalData.config.description,
     url: canURL,
   };
@@ -17,15 +17,15 @@ export default function SEO({ globalData, title }) {
       "@type": "Bakery",
       name: globalData.config.name,
       description: globalData.config.description,
-      image: globalData.contact.banner.image,
+      image: globalData.banner.image,
       url: globalData.config.url,
-      telephone: globalData.contact.telephone[0],
+      telephone: globalData.telephone[0],
       address: {
         "@type": "PostalAddress",
-        streetAddress: globalData.contact.address.streetAddress,
-        addressLocality: globalData.contact.address.addressLocality,
-        postalCode: globalData.contact.address.postalCode,
-        addressCountry: globalData.contact.address.addressCountry,
+        streetAddress: globalData.address.streetAddress,
+        addressLocality: globalData.address.addressLocality,
+        postalCode: globalData.address.postalCode,
+        addressCountry: globalData.address.addressCountry,
       },
     },
   ];

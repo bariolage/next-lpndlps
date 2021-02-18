@@ -15,23 +15,22 @@ config:
       slug: "/vente"
     - name: "Nous Contacter"
       slug: "#contact"
-contact: 
-  title: Nous Contacter
-  message: "Pour toutes informations ou commandes au fournil :"
-  banner: 
-      image : "/images/pndsl-carte.jpeg"
-      alt : "carte du pain des lou"
-      width: 567
-      height: 227
-  mail: contact@lepaindeslou.com
-  telephone: 
-    - 123456789
-    - 987654321
-  address: 
-    streetAddress: "179 rte de Lodoen"
-    addressLocality: "Plougastel-Daoulas"
-    postalCode: "29470"
-    addressCountry: "FR"
+title: Nous Contacter
+description: "Pour toutes informations ou commandes au fournil :"
+banner: 
+    image : "/images/pndsl-carte.jpeg"
+    alt : "carte du pain des lou"
+    width: 567
+    height: 227
+mail: contact@lepaindeslou.com
+telephone: 
+  - 123456789
+  - 987654321
+address: 
+  streetAddress: "179 rte de Lodoen"
+  addressLocality: "Plougastel-Daoulas"
+  postalCode: "29470"
+  addressCountry: "FR"
 ---
 
 Annonce ...
