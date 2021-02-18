@@ -1,4 +1,15 @@
 ---
 label: Image de couverture
 hide_body: true
-fields: []
+fields:
+- name: image
+  type: file
+  config:
+    maxSize: 10
+  label: Image
+- name: alt
+  type: text
+  config:
+    required: true
+  label: Texte alternatif
+  default: image
