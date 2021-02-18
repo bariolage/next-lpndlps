@@ -109,7 +109,7 @@ const BottomBar = styled.div`
 const Footer = ({ globalData }) => {
   return (
     <Wrap id="contact">
-      <Text full="true" bg="dark" body={globalData.body} />
+      <Text fullWith="true" bg="dark" body={globalData.body} />
       <Contact>
         <h2>{globalData.contactTitle}</h2>
         <p>{globalData.contactMessage}</p>

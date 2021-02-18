@@ -18,7 +18,7 @@ const Wrap = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex: ${(props) => props.full && "1 0 100%"};
+  flex: ${(props) => props.fullWith && "1 0 100%"};
 
   > * {
     max-width: 64rem;
@@ -71,7 +71,7 @@ const Wrap = styled.section`
   }
 `;
 
-const Text = ({ body, id, full, bg }) => {
+const Text = ({ body, id, fullWith, bg }) => {
   const renderers = {
     image: (props) => {
       return (
@@ -102,7 +102,7 @@ const Text = ({ body, id, full, bg }) => {
     },
   };
   return (
-    <Wrap id={id} full={full} bg={bg}>
+    <Wrap id={id} fullWith={fullWith} bg={bg}>
       <ReactMarkdown
         plugins={[unwrapImages]}
         source={body}

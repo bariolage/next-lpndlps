@@ -21,11 +21,16 @@ const Figure = styled.figure`
   height: 100%;
 `;
 
-export default function Cover({ image, about }) {
+export default function Cover({ image }) {
   return (
     <Wrap>
       <Figure>
-        <Image alt="image" src={image} layout="fill" objectFit="cover" />
+        <Image
+          alt={image.alt}
+          src={image.image}
+          layout="fill"
+          objectFit="cover"
+        />
       </Figure>
     </Wrap>
   );

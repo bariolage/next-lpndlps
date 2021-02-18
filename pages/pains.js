@@ -1,6 +1,6 @@
 import matter from "gray-matter";
 import Text from "../components/text";
-import Images from "../components/images";
+import Gallery from "../components/gallery";
 import Table from "../components/table";
 import Hero from "../components/hero";
 import Cover from "../components/cover";
@@ -17,21 +17,21 @@ export async function getStaticProps() {
   return {
     props: {
       body: data.content,
-      data: data.data,
+      pageData: data.data,
       globalData,
     },
   };
 }
 
-export default function Pains({ body, data, globalData }) {
+export default function Pains({ body, pageData, globalData }) {
   return (
     <Page globalData={globalData}>
-      <SEO globalData={globalData} title={data.title} />
-      <Hero title={data.title} message={data.message} />
-      <Table data={data.carte} />
-      <Cover image={data.cover} />
-      <Text full="true" body={body} />
-      <Images full="true" images={data.gallery} />
+      <SEO globalData={globalData} title={pageData.title} />
+      <Hero title={pageData.title} message={pageData.message} />
+      <Table data={pageData.carte} />
+      <Cover image={pageData.cover} />
+      <Text fullWith="true" body={body} />
+      <Gallery fullWith="true" images={pageData.gallery} />
     </Page>
   );
 }

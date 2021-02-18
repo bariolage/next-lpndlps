@@ -34,16 +34,16 @@ export async function getStaticProps() {
 
   return {
     props: {
-      body: data.content,
-      data: data.data,
-      table,
-      shops,
+      //body: data.content,
+      pageData: { ...data.data, table, shops, body: data.content },
+      //table,
+      //shops,
       globalData,
     },
   };
 }
 
-export default function Vente({ body, data, table, shops, globalData }) {
+export default function Vente({ body, pageData, table, shops, globalData }) {
   const viewportInit = { lat: 48.35261871558314, lng: -4.4191839176185725 };
   const [viewport, setViewport] = useState(viewportInit);
   const Map = useMemo(
@@ -56,18 +56,18 @@ export default function Vente({ body, data, table, shops, globalData }) {
   );
   return (
     <Page globalData={globalData}>
-      <SEO globalData={globalData} title={data.title} />
-      <Hero title={data.title} message={data.message} />
+      <SEO globalData={globalData} title={pageData.title} />
+      <Hero title={pageData.title} message={pageData.message} />
       <Table
-        data={table}
+        data={pageData.table}
         withMap="true"
         viewportInit={viewportInit}
         viewport={viewport}
         setViewport={setViewport}
       />
-      <Map shops={shops} viewport={viewport} />
-      <Cover image={data.cover} />
-      <Text body={body} id="infos" />
+      <Map shops={pageData.shops} viewport={viewport} />
+      <Cover image={pageData.cover} />
+      <Text body={pageData.body} id="infos" />
     </Page>
   );
 }

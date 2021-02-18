@@ -13,9 +13,13 @@ section:
     un four à chauffe directe  \neau filtrée (système Berkey)\n\nLa longue fermentation
     au levain naturel permet de pré-digérer le blé afin d’assimiler tous ses nutriments
     et de conserver notre pain au moins une semaine."
-  cover: "/images/croquis boulange JL-72px.jpg"
+  cover:
+    image: "/images/croquis boulange JL-72px.jpg"
+    alt: "croquis"
 - title: Nature & Progrès
-  cover: "/images/mains-9-12cmnoir et bc-100px.jpg"
+  cover: 
+    image: "/images/mains-9-12cmnoir et bc-100px.jpg"
+    alit: "croquis"
   content: |-
     ### Nature&Progrès
 
