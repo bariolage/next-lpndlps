@@ -119,7 +119,7 @@ const Footer = ({ globalData }) => {
           id="annonce"
           fullWith="true"
           bg="dark"
-          body={globalData.global.annonce || ""}
+          body={globalData.global.annonce.body || ""}
         />
       )}
       <Contact>
