@@ -1,8 +1,11 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
 var unwrapImages = require("remark-unwrap-images");
 import styled from "styled-components";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Wrap = styled.section`
   margin: 0 auto;
@@ -73,7 +76,17 @@ const Wrap = styled.section`
   }
 `;
 
+const Anim = styled(motion.div)``;
+
 const Text = ({ body, id, fullWith, bg }) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
   const renderers = {
     image: (props) => {
       return (
@@ -105,12 +118,23 @@ const Text = ({ body, id, fullWith, bg }) => {
   };
   return (
     <Wrap id={id} fullWith={fullWith} bg={bg}>
-      <ReactMarkdown
-        plugins={[unwrapImages]}
-        source={body}
-        renderers={renderers}
-        id="infos"
-      />
+      <Anim
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        transition={{ duration: 0.3 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+      >
+        <ReactMarkdown
+          plugins={[unwrapImages]}
+          source={body}
+          renderers={renderers}
+          id="infos"
+        />
+      </Anim>
     </Wrap>
   );
 };

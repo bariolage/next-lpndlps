@@ -6,7 +6,7 @@ const Wrap = styled.section`
   padding-top: ${(props) => !props.fullWith && "0"};
   order: ${(props) => props.fullWith && "+1"};
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   align-items: center;
   justify-content: center;
   grid-gap: 0.5rem;
@@ -14,6 +14,7 @@ const Wrap = styled.section`
   width: 50%;
   flex: ${(props) => props.fullWith && "1 0 100%"};
   @media (max-width: 48rem) {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     padding: 0.25rem;
     grid-gap: 0.25rem;
     max-width: 100%;

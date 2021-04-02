@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Wrap = styled.section`
   margin-left: 50vw;
@@ -25,7 +26,7 @@ const Wrap = styled.section`
   }
 `;
 
-const H2 = styled.h2`
+const H2 = styled(motion.h2)`
   margin: 0;
   padding: 3rem 0;
   font-size: 3rem;
@@ -39,6 +40,7 @@ const H2 = styled.h2`
   }
 `;
 
+const MessageWrap = styled(motion.div)``;
 const Message = styled(ReactMarkdown)`
   margin: 0;
   a:hover {
@@ -49,8 +51,20 @@ const Message = styled(ReactMarkdown)`
 const Hero = ({ title, message }) => {
   return (
     <Wrap>
-      <H2>{title}</H2>
-      <Message source={message} />
+      <H2
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        {title}
+      </H2>
+      <MessageWrap
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        <Message source={message} />
+      </MessageWrap>
     </Wrap>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "typeface-dosis";
 import { createGlobalStyle } from "styled-components";
-
+import { AnimateSharedLayout } from "framer-motion";
 const GlobalStyle = createGlobalStyle`
  :root {
   --font-body: Dosis, Mukta, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -50,8 +50,10 @@ a {
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <AnimateSharedLayout>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </AnimateSharedLayout>
     </>
   );
 }
