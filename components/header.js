@@ -74,8 +74,8 @@ const Header = ({ globalData }) => {
     <Wrap id="header">
       <Figure>
         <Image
-          alt={globalData.config.cover.alt}
-          src={globalData.config.cover.image}
+          alt={" "}
+          src={globalData.global.cover}
           layout="fill"
           objectFit="cover"
         />
@@ -87,11 +87,11 @@ const Header = ({ globalData }) => {
       </TopBar>
       <Link href="/">
         <Title>
-          <h1>{globalData.config.name}</h1>
-          <p>{globalData.config.description}</p>
+          <h1>{globalData.global.title}</h1>
+          <p>{globalData.global.description}</p>
         </Title>
       </Link>
-      <Navigation navigation={globalData.config.navigation} />
+      <Navigation navigation={globalData.global.navigation} />
     </Wrap>
   );
 };

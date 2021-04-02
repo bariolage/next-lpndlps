@@ -1,7 +1,7 @@
 import Hero from "../components/hero";
 import Page from "../components/page";
 import dynamic from "next/dynamic";
-import { getGlobalData } from "../lib/getGlobalData";
+import { getGlobalData } from "../lib/get";
 import SEO from "../components/seo";
 
 const Cover = dynamic(() => import("../components/cover"));

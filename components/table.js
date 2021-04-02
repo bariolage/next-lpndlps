@@ -83,20 +83,20 @@ const Table = ({ data, withMap, viewportInit, viewport, setViewport }) => {
                     onClick={() =>
                       setViewport({
                         lat:
-                          item.coordinates.latitude === viewport.lat
+                          item.geo.lat === viewport.lat
                             ? viewportInit.lat
-                            : item.coordinates.latitude,
+                            : item.geo.lat,
                         lng:
-                          item.coordinates.longitude === viewport.lng
+                          item.geo.lng === viewport.lng
                             ? viewportInit.lng
-                            : item.coordinates.longitude,
+                            : item.geo.lng,
                       })
                     }
                   >
                     {item.name}
                   </Button>
                 ) : (
-                  <ReactMarkdown source={item} />
+                  <ReactMarkdown source={item.name} />
                 )}
               </Item>
             ))}

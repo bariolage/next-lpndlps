@@ -13,7 +13,7 @@ const Marker = ({ shop, openPopup }) => {
   return (
     <BaseMarker
       ref={markerRef}
-      position={[shop.coordinates.latitude, shop.coordinates.longitude]}
+      position={[shop.geo.lat, shop.geo.lng]}
       animate={true}
     >
       <Popup>

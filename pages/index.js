@@ -1,36 +1,32 @@
-import matter from "gray-matter";
 import Text from "../components/text";
 import { Fragment } from "react";
 import Hero from "../components/hero";
-//import Cover from "../components/cover";
 import Page from "../components/page";
 import dynamic from "next/dynamic";
-import { getGlobalData } from "../lib/getGlobalData";
+import { getGlobalData, getHomeData } from "../lib/get";
 import SEO from "../components/seo";
 const Cover = dynamic(() => import("../components/cover"));
 
 export async function getStaticProps() {
-  const content = await import(`../content/about.md`);
-  const data = matter(content.default);
-
   const globalData = await getGlobalData();
+  const homeData = await getHomeData();
   return {
     props: {
-      pageData: data.data,
+      homeData,
       globalData,
     },
   };
 }
 
-export default function Home({ pageData, globalData }) {
+export default function Home({ homeData, globalData }) {
   return (
     <Page globalData={globalData}>
-      <SEO globalData={globalData} title={pageData.title} />
-      <Hero title={pageData.title} message={pageData.message} />
-      {pageData.section.map((section, i) => (
+      <SEO globalData={globalData} title={homeData.title} />
+      <Hero title={homeData.title} message={homeData.message} />
+      {homeData.sections.map((section, i) => (
         <Fragment key={`home-${i}`}>
           <Text body={section.content} />
-          <Cover image={section.cover} />
+          <Cover image={section.cover.url} />
         </Fragment>
       ))}
     </Page>

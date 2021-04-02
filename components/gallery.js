@@ -46,7 +46,7 @@ export default function Gallery({ images, fullWith }) {
     <Wrap fullWith={fullWith}>
       {images.map((e, i) => (
         <Figure key={`image-${i}`}>
-          <Image alt={e.alt} src={e.image} layout="fill" objectFit="cover" />
+          <Image alt={e.alt} src={e.url} layout="fill" objectFit="cover" />
           <Figcaption>{e.alt}</Figcaption>
         </Figure>
       ))}

@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
   --sm-height: 10rem;
   --color-dark: #252525;
   --color-white: #fefef6;
-  --color-primary: #A72100;
+  --color-primary: #0B7C96;
 }
 @media (max-width: 48rem) {
   :root {

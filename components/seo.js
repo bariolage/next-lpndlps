@@ -2,12 +2,12 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function SEO({ globalData, title }) {
-  const canURL = globalData.config.url + useRouter().pathname;
+  const canURL = globalData.global.url + useRouter().pathname;
 
   const seo = {
-    title: globalData.config.name + " - " + title || globalData.config.name,
-    image: globalData.banner.image,
-    description: globalData.config.description,
+    title: globalData.global.title + " - " + title || globalData.global.title,
+    image: globalData.contact.banner.url,
+    description: globalData.global.description,
     url: canURL,
   };
 
@@ -15,17 +15,17 @@ export default function SEO({ globalData, title }) {
     {
       "@context": "http://schema.org/",
       "@type": "Bakery",
-      name: globalData.config.name,
-      description: globalData.config.description,
-      image: globalData.banner.image,
-      url: globalData.config.url,
-      telephone: globalData.telephone[0],
+      name: globalData.global.title,
+      description: globalData.global.description,
+      image: globalData.contact.banner.url,
+      url: globalData.global.url,
+      telephone: globalData.contact.telephone[0],
       address: {
         "@type": "PostalAddress",
-        streetAddress: globalData.address.streetAddress,
-        addressLocality: globalData.address.addressLocality,
-        postalCode: globalData.address.postalCode,
-        addressCountry: globalData.address.addressCountry,
+        streetAddress: globalData.contact.address.streetAddress,
+        addressLocality: globalData.contact.address.addressLocality,
+        postalCode: globalData.contact.address.postalCode,
+        addressCountry: globalData.contact.address.addressCountry,
       },
     },
   ];
@@ -49,7 +49,7 @@ export default function SEO({ globalData, title }) {
           name="viewport"
           content="width=device-width,initial-scale=1,maximum-scale=5.0, minimum-scale=1"
         />
-        <meta name="description" content={globalData.config.description} />
+        <meta name="description" content={globalData.global.description} />
         <title>{seo.title}</title>
         <link rel="canonical" href={canURL} />
         <meta name="image" content={seo.image} />
