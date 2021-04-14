@@ -24,6 +24,10 @@ const GlobalStyle = createGlobalStyle`
     --header-height: 24rem;
   }
 }
+html {
+  scroll-behavior: smooth;
+  font-size:16px;
+}
 html,
 body {
   padding: 0;
@@ -43,19 +47,23 @@ a {
 
 * {
   box-sizing: border-box;
-  border: 10x solid red;
+  /* border: 10x solid red; */
+}
+
+#contact,#header {
+	scroll-behavior: smooth;
 }
 `;
 
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <AnimateSharedLayout>
-        <GlobalStyle />
-        <Component {...pageProps} />
-      </AnimateSharedLayout>
-    </>
-  );
+ return (
+  <>
+   <AnimateSharedLayout>
+    <GlobalStyle />
+    <Component {...pageProps} />
+   </AnimateSharedLayout>
+  </>
+ );
 }
 
 export default MyApp;

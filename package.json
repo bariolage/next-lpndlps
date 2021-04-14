@@ -27,6 +27,7 @@
     "typeface-dosis": "^1.1.13"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "latest"
+    "babel-plugin-styled-components": "latest",
+    "globby": "^11.0.3"
   }
 }

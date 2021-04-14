@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://https://next-lpndlps.vercel.app/sitemap.xml
