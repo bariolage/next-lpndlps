@@ -70,7 +70,6 @@ const TopBar = styled.section`
 `;
 
 const Header = ({ globalData }) => {
- console.log(globalData.global.annonce.visible);
  return (
   <Wrap id="header">
    <Figure>
