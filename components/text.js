@@ -35,7 +35,7 @@ const Wrap = styled.section`
   line-height: 1.5rem;
   font-weight: bold;
   margin: 3rem 0 1rem 0;
-  text-align: center;
+  text-align: ${(props) => (props.fullWith ? "left" : "center")};
   text-transform: uppercase;
  }
 
