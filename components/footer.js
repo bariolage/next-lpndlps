@@ -151,7 +151,9 @@ const Footer = ({ globalData }) => {
       <List>
        {globalData.contact.telephone.map((e, i) => (
         <Item key={e.number + i}>
-         <p>{e.number}</p>
+         <p>
+          {e.name} : {e.number}
+         </p>
         </Item>
        ))}
       </List>
