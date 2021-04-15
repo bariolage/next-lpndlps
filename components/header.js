@@ -74,7 +74,7 @@ const Header = ({ globalData }) => {
   <Wrap id="header">
    <Figure>
     <Image
-     alt={globalData.global.coverAlt}
+     alt={globalData.global.coverAlt || "le pain des lou - illustration"}
      src={globalData.global.cover}
      layout="fill"
      objectFit="cover"
