@@ -14,9 +14,9 @@ const Wrap = styled.section`
 const Figure = styled.figure`
  position: relative;
  margin: 0;
- background-color: lighten(blue, 15%);
+ /* background-color: lighten(blue, 15%);
  background-blend-mode: multiply;
- mix-blend-mode: multiply;
+ mix-blend-mode: multiply; */
  width: 100%;
  height: 100%;
 `;
