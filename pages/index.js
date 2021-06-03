@@ -24,10 +24,17 @@ export default function Home({ homeData, globalData }) {
    <SEO globalData={globalData} title={homeData.title} />
    <Hero title={homeData.title} message={homeData.message} />
    {homeData.sections.map((section, i) => (
-    <Fragment key={`home-${i}`}>
+    <section
+     key={`home-${i}`}
+     style={{
+      width: "100%",
+      display: "flex",
+      flexFlow: i % 2 == 0 ? "row wrap" : "row-reverse wrap",
+     }}
+    >
      <Text body={section.content} />
      <Cover image={section.cover.url} />
-    </Fragment>
+    </section>
    ))}
   </Layout>
  );

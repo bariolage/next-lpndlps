@@ -5,21 +5,12 @@ import styled from "styled-components";
 
 const Main = styled.main`
  margin: 0 auto;
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
+ /* display: flex;
+ flex-flow: row wrap; */
  background-color: var(--color-white);
-
- section:nth-child(2n + 4) {
-  order: +1;
- }
 
  @media (max-width: 48rem) {
   flex-direction: column;
-
-  section:nth-child(2n + 4) {
-   order: 0;
-  }
  }
 `;
 
