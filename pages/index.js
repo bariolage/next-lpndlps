@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
 export default function Home({ homeData, globalData }) {
  return (
-  <Layout globalData={globalData}>
+  <>
    <SEO globalData={globalData} title={homeData.title} />
    <Hero title={homeData.title} message={homeData.message} />
    {homeData.sections.map((section, i) => (
@@ -36,6 +36,6 @@ export default function Home({ homeData, globalData }) {
      <Cover image={section.cover.url} />
     </section>
    ))}
-  </Layout>
+  </>
  );
 }

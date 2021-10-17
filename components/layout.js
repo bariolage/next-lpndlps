@@ -1,24 +1,24 @@
-import { Fragment } from "react";
+import { Fragment, useState, useEffect } from "react";
 import Header from "./header";
 import Footer from "./footer";
-import styled from "styled-components";
-
-const Main = styled.main`
- margin: 0 auto;
- display: flex;
- flex-flow: row wrap;
- background-color: var(--color-white);
-
- @media (max-width: 48rem) {
-  flex-direction: column;
- }
-`;
+import Link from "next/link";
 
 const Layout = ({ infos, globalData, children }) => {
  return (
   <Fragment>
+   {/* {globalData.global.annonce.visible && (
+    <div className="p-4 lg:px-16 w-screen bg-white text-gray-800">
+     <Link href="/#annonce">
+      <a>
+       {globalData.global.annonce.date} : {globalData.global.annonce.title}
+      </a>
+     </Link>
+    </div>
+   )} */}
    <Header globalData={globalData} />
-   <Main>{children}</Main>
+   <main className="mx-auto flex flex-wrap flex-col lg:flex-row bg-white">
+    {children}
+   </main>
    <Footer globalData={globalData} />
   </Fragment>
  );

@@ -1,7 +1,7 @@
 import matter from "gray-matter";
 import Text from "../components/text";
 import Hero from "../components/hero";
-import Table from "../components/table";
+import ShopList from "../components/shopList";
 import Cover from "../components/cover";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
@@ -34,12 +34,11 @@ export default function Vente({ shopData, globalData }) {
   []
  );
  return (
-  <Layout globalData={globalData}>
+  <>
    <SEO globalData={globalData} title={shopData.title} />
    <Hero title={shopData.title} message={shopData.message} />
-   <Table
+   <ShopList
     data={shopData.categories}
-    withMap="true"
     viewportInit={viewportInit}
     viewport={viewport}
     setViewport={setViewport}
@@ -54,6 +53,6 @@ export default function Vente({ shopData, globalData }) {
    />
    <Cover image={shopData.cover.url} />
    <Text body={shopData.content} id="infos" />
-  </Layout>
+  </>
  );
 }

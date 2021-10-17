@@ -20,10 +20,10 @@ export async function getStaticProps() {
 
 export default function Home({ globalData, legalData }) {
  return (
-  <Layout globalData={globalData} title={legalData.title}>
+  <>
    <SEO globalData={globalData} />
    <Hero title={legalData.title} />
    <Text body={legalData.content} fullWith="true" />
-  </Layout>
+  </>
  );
 }

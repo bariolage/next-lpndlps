@@ -1,7 +1,10 @@
+import "tailwindcss/tailwind.css";
+import "../styles/globals.css";
 import React from "react";
 import "typeface-dosis";
 import { createGlobalStyle } from "styled-components";
 import { AnimateSharedLayout } from "framer-motion";
+import Layout from "../components/layout";
 const GlobalStyle = createGlobalStyle`
  :root {
   --font-body: Dosis, Mukta, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
@@ -55,14 +58,14 @@ a {
 }
 `;
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, pageData }) {
  return (
-  <>
+  <Layout globalData={pageProps.globalData}>
    <AnimateSharedLayout>
     <GlobalStyle />
     <Component {...pageProps} />
    </AnimateSharedLayout>
-  </>
+  </Layout>
  );
 }
 
