@@ -20,7 +20,7 @@ const Header = ({ globalData }) => {
    <Navigation navigation={globalData.global.navigation} />
    <a
     href="#"
-    class="z-20 bg-blue-700 rounded-full fixed top-0 right-0 my-8 mx-8 p-2 lg:p-4 lg:m-12 shadow-md hover:shadow-xl snipcart-checkout"
+    className="z-20 bg-blue-700 rounded-full fixed top-0 right-0 my-8 mx-8 p-2 lg:p-4 lg:m-12 shadow-md hover:shadow-xl snipcart-checkout"
    >
     <svg
      xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,7 @@ const Header = ({ globalData }) => {
    </a>
    <figure className="absolute top-0 right-0 bottom-0 left-0">
     <Image
-     alt={globalData.global.coverAlt || "le pain des lou - illustration"}
+     alt={"le pain des lou - illustration"}
      src={globalData.global.cover}
      layout="fill"
      objectFit="cover"

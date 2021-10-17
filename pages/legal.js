@@ -1,6 +1,6 @@
-import Hero from "../components/hero";
+//import Hero from "../components/hero";
 import Layout from "../components/layout";
-import Text from "../components/text";
+//import Text from "../components/text";
 import dynamic from "next/dynamic";
 import { getGlobalData, getLegalData } from "../lib/get";
 import SEO from "../components/seo";
@@ -22,8 +22,8 @@ export default function Home({ globalData, legalData }) {
  return (
   <>
    <SEO globalData={globalData} />
-   <Hero title={legalData.title} />
-   <Text body={legalData.content} fullWith="true" />
+   {/* <Hero title={legalData.title} /> */}
+   {/* <Text body={legalData.content} fullWith="true" /> */}
   </>
  );
 }

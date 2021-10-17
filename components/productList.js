@@ -12,7 +12,7 @@ export default function ProductList({ data }) {
         className="capitalize flex flex-col items-baseline my-3"
         key={item.name + i}
        >
-        <ReactMarkdown className="prose" source={item.name} />
+        <ReactMarkdown className="prose" children={item.name} />
         <div>
          <span className="mr-2 text-sm text-gray-600">{item.price}€</span>
          <button

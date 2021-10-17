@@ -1,30 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { ServerStyleSheet } from "styled-components";
 
 export default class MyDocument extends Document {
  static async getInitialProps(ctx) {
-  const sheet = new ServerStyleSheet();
-  const originalRenderPage = ctx.renderPage;
-
-  try {
-   ctx.renderPage = () =>
-    originalRenderPage({
-     enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
-    });
-
-   const initialProps = await Document.getInitialProps(ctx);
-   return {
-    ...initialProps,
-    styles: (
-     <>
-      {initialProps.styles}
-      {sheet.getStyleElement()}
-     </>
-    ),
-   };
-  } finally {
-   sheet.seal();
-  }
+  const initialProps = await Document.getInitialProps(ctx);
+  return { ...initialProps };
  }
  render() {
   return (
@@ -49,18 +28,18 @@ export default class MyDocument extends Document {
       data-config-modal-style="side"
      >
       <shipping-method section="bottom">
-       <fieldset class="snipcart-form__set">
-        <div class="snipcart-form__field">
+       <fieldset className="snipcart-form__set">
+        <div className="snipcart-form__field">
          <snipcart-label
           for="customerType"
-          class="snipcart__font--tiny"
+          className="snipcart__font--tiny"
           for="customerType"
          >
           Jour de retrait
          </snipcart-label>
          <snipcart-select
           name="customerType"
-          class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold"
+          className="snipcart-form__select  snipcart__font--secondary snipcart__font--bold"
          >
           <option value="Lundi">Lundi</option>
           <option value="Mardi">Mardi</option>

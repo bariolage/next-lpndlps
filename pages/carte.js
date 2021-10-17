@@ -1,5 +1,4 @@
 import Text from "../components/text";
-import Gallery from "../components/gallery";
 import ProductList from "../components/productList";
 import Hero from "../components/hero";
 import Cover from "../components/cover";
@@ -26,7 +25,6 @@ export default function Menu({ menuData, globalData }) {
    <ProductList data={menuData.categories} />
    <Cover image={menuData.cover.url} />
    <Text fullWith="true" body={menuData.content} />
-   <Gallery fullWith="true" images={menuData.gallery} />
   </>
  );
 }

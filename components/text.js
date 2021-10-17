@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-var unwrapImages = require("remark-unwrap-images");
+import { unwrapImages } from "remark-unwrap-images";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -65,9 +65,9 @@ const Text = ({ body, id, fullWith, bg }) => {
     }}
    >
     <ReactMarkdown
-     plugins={[unwrapImages]}
-     source={body}
-     renderers={renderers}
+     /* plugins={[unwrapImages]} */
+     children={body}
+     components={renderers}
      id="infos"
      className={`prose max-w-prose mx-auto ${
       bg == "dark" ? "text-gray-300" : "text-blue-50"
