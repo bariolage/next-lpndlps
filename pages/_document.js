@@ -24,7 +24,7 @@ export default class MyDocument extends Document {
      <div
       hidden
       id="snipcart"
-      data-api-key="ZTg5MjMzMTYtMTk0Zi00MGRkLTgyNDYtZDg3YWQyYzczMmNiNjM3MjQwNTEwODI0NDkxMjc5"
+      data-api-key="MGRmYWRiYTAtOGU4Yy00ZTM1LWI2MTgtYTYyMTVlNzM3ZTAxNjM3NzAxNDIyNjE1MjM0MDAy"
       data-config-modal-style="side"
       className="z-20"
      >
