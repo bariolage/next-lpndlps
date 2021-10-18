@@ -33,12 +33,12 @@ export default function ProductList({ data }) {
          </p>
          <button
           className="text-sm font-bold relative self-center text-white snipcart-add-item hover:text-gray-100 hover:bg-yellow-500 bg-yellow-600 pl-3 pr-2 py-1 rounded-l-2xl"
-          data-item-id={`${item.name}-${e.title}`}
+          data-item-id={`${e.title} - ${item.name}`}
           data-item-price={item.price}
           data-item-url="/carte"
-          data-item-description={`${item.name}-${e.title}`}
+          data-item-description={`${e.title} - ${item.name}`}
           data-item-image={item.image.url}
-          data-item-name={`${item.name}-${e.title}`}
+          data-item-name={`${e.title} - ${item.name}`}
          >
           Ajouter au panier
          </button>
