@@ -11,7 +11,7 @@ const Header = ({ globalData }) => {
   >
    <Link href="/">
     <a className="z-20">
-     <h1 className="text-white text-4xl w-2/3 lg:w-auto lg:text-5xl hover:text-blue-500">
+     <h1 className="text-white font-black text-4xl w-2/3 lg:w-auto lg:text-5xl hover:text-blue-500">
       {globalData.global.title}
      </h1>
     </a>
@@ -20,7 +20,7 @@ const Header = ({ globalData }) => {
    <Navigation navigation={globalData.global.navigation} />
    <a
     href="#"
-    className="z-20 bg-blue-700 rounded-full fixed top-0 right-0 my-8 mx-8 p-2 lg:p-4 lg:m-12 shadow-md hover:shadow-xl snipcart-checkout"
+    className="z-20 bg-yellow-600 rounded-full fixed top-0 right-0 my-8 mx-8 p-2 lg:p-4 lg:m-12 shadow-sm hover:shadow-md snipcart-checkout"
    >
     <svg
      xmlns="http://www.w3.org/2000/svg"

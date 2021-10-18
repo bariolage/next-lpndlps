@@ -15,7 +15,7 @@ const Navigation = (props) => {
          router.pathname === item.slug ? "bg-blue-700" : "bg-gray-800"
         }
         hover:bg-blue-700
-        mb-2 rounded-2xl font-bold`}
+        mb-2 rounded-2xl font-bold text-lg`}
         key={`nav-${item.slug}`}
        >
         <Link href={item.slug} passHref>

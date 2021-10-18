@@ -26,6 +26,7 @@ export default class MyDocument extends Document {
       id="snipcart"
       data-api-key="ZTg5MjMzMTYtMTk0Zi00MGRkLTgyNDYtZDg3YWQyYzczMmNiNjM3MjQwNTEwODI0NDkxMjc5"
       data-config-modal-style="side"
+      className="z-20"
      >
       <shipping-method section="bottom">
        <fieldset className="snipcart-form__set">

@@ -17,7 +17,10 @@ const Hero = ({ title, message }) => {
     animate={{ opacity: 1 }}
     transition={{ delay: 0.2 }}
    >
-    <ReactMarkdown className="prose text-white" children={message} />
+    <ReactMarkdown
+     className="prose text-white tracking-wide"
+     children={message}
+    />
    </motion.div>
   </section>
  );

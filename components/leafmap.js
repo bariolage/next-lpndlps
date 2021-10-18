@@ -28,6 +28,7 @@ const Map = ({
     style={{ height: "100%", width: "100%" }}
     tap={false}
     ref={mapRef}
+    className="z-10"
    >
     <TileLayer
      attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

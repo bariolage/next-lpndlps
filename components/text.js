@@ -46,7 +46,7 @@ const Text = ({ body, id, fullWith, bg }) => {
  };
  return (
   <section
-   className={`relative 
+   className={`tracking-wide relative 
    py-16 px-4 lg:p-16 mx-auto
    w-full  min-h-96 ${fullWith ? "lg:w-full" : "lg:w-1/2"}
    text-white ${bg == "dark" ? "bg-gray-800" : "bg-blue-700"}
