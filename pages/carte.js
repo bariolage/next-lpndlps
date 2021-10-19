@@ -22,7 +22,10 @@ export default function Menu({ menuData, globalData }) {
   <>
    <SEO globalData={globalData} title={menuData.title} />
    <Hero title={menuData.title} message={menuData.message} />
-   <ProductList data={menuData.categories} />
+   <ProductList
+    data={menuData.categories}
+    shopIsActive={globalData.shop.isActive}
+   />
    <Cover image={menuData.cover.url} />
    <Text fullWith="true" body={menuData.content} />
   </>

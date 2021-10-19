@@ -20,7 +20,7 @@ const Footer = ({ globalData }) => {
      body={globalData.global.annonce.body || ""}
     />
    )}
-   <section className="py-2 px-1 lg:p-16 bg-blue-700 text-white w-full lg:w-1/2">
+   <section className=" p-4  lg:p-16 bg-blue-700 text-white w-full lg:w-1/2">
     <h2 className="uppercase mb-8 text-2xl font-bold">
      {globalData.contact.title}
     </h2>
@@ -93,7 +93,7 @@ const Footer = ({ globalData }) => {
     </figure>
     <div className="mb-8 flex flex-col items-center lg:flex-row lg:items-baseline ">
      <Link href="/legal" passHref>
-      <a className="underline mr-8 hover:text-blue-700">Mentions Légales</a>
+      <a className="underline lg:mr-8 hover:text-blue-700">Mentions Légales</a>
      </Link>
      <p>lepaindeslou@2021</p>
     </div>
