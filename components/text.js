@@ -6,7 +6,7 @@ import { unwrapImages } from "remark-unwrap-images";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Text = ({ body, id, fullWith, bg }) => {
+const Text = ({ children, body, id, fullWith, bg }) => {
  const controls = useAnimation();
  const [ref, inView] = useInView();
 
@@ -49,7 +49,13 @@ const Text = ({ body, id, fullWith, bg }) => {
    className={`tracking-wide relative 
    py-16 px-4 lg:p-16 mx-auto
    w-full  min-h-96 ${fullWith ? "lg:w-full" : "lg:w-1/2"}
-   text-white ${bg == "dark" ? "bg-gray-800" : "bg-blue-700"}
+   text-white ${
+    bg == "dark"
+     ? "bg-gray-800"
+     : bg == "light"
+     ? "bg-gray-100 text-gray-800"
+     : "bg-blue-700"
+   }
    flex flex-col justify-center
    `}
    id={id}
@@ -64,15 +70,21 @@ const Text = ({ body, id, fullWith, bg }) => {
      hidden: { opacity: 0, scale: 0.9 },
     }}
    >
-    <ReactMarkdown
-     /* plugins={[unwrapImages]} */
-     children={body}
-     components={renderers}
-     id="infos"
-     className={`prose max-w-prose mx-auto ${
-      bg == "dark" ? "text-gray-300" : "text-blue-50"
-     }`}
-    />
+    {children ? (
+     children
+    ) : body ? (
+     <ReactMarkdown
+      /* plugins={[unwrapImages]} */
+      children={body}
+      components={renderers}
+      id="infos"
+      className={`prose max-w-prose mx-auto ${
+       bg == "dark" ? "text-gray-300" : "text-blue-50"
+      }`}
+     />
+    ) : (
+     ""
+    )}
    </motion.div>
   </section>
  );

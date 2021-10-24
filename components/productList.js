@@ -1,14 +1,15 @@
 import Image from "next/image";
+
 export default function ProductList({ data, shopIsActive }) {
  return (
-  <section className="bg-gray-100 w-full lg:w-1/2 max-w-full h-fit mx-auto py-8 px-4 lg:p-16 flex flex-col items-center">
-   <h3 className="uppercase text-3xl font-black mb-6 text-gray-800 text-center">
+  <section className="bg-blue-700 w-full  max-w-full h-fit mx-auto py-8 px-4 lg:p-16 flex flex-col">
+   <h3 className="uppercase text-3xl font-black mb-6 text-gray-100 text-center">
     Les pains
    </h3>
-   <div className="w-full flex flex-wrap">
+   <div className="w-full flex flex-wrap justify-center">
     {data.map((e, i) => (
-     <div className="flex-1 min-w-60 flex-1 m-4" key={i}>
-      <p className="uppercase text-xl font-black mb-2 text-gray-800">
+     <div className="m-4  w-1/3" key={i}>
+      <p className="uppercase text-xl font-black mb-2 text-gray-100">
        {e.title}
       </p>
       <ul>
