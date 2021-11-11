@@ -18,17 +18,17 @@ function MyApp({ Component, pageProps }) {
   return (
    <>
     <Layout globalData={pageProps.globalData}>
-     {/* {pageProps.globalData.shop.isActive && (
+     {pageProps.globalData.shop.isActive && (
       <Script
        src="https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.js"
        strategy="lazyOnload"
       />
-     )} */}
+     )}
      <AnimateSharedLayout>
       <Component {...pageProps} />
      </AnimateSharedLayout>
     </Layout>
-    {/* <div
+    <div
      hidden
      id="snipcart"
      data-api-key={process.env.NEXT_SNIPCART_API}
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
        <DatePicker pickupLocations={pageProps.globalData.shop.pickup} />
       </fieldset>
      </shipping-method>
-    </div> */}
+    </div>
    </>
   );
  } else {

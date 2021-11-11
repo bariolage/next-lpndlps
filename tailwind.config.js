@@ -10,6 +10,12 @@ module.exports = {
     blue: colors.cyan,
    },
    flex: { full: "1 0 100%" },
+   minWidth: {
+    128: "32rem",
+   },
+   minHeight: {
+    128: "32rem",
+   },
    typography: {
     DEFAULT: {
      css: {

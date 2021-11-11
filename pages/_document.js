@@ -1,5 +1,4 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import DatePicker from "../components/DataPicker";
 
 export default class MyDocument extends Document {
  static async getInitialProps(ctx) {
