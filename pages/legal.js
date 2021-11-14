@@ -1,5 +1,5 @@
-import Box from "@components/box";
-import { getGlobalData, getLegalData } from "@lib/get";
+import Box from "../components/box";
+import { getGlobalData, getLegalData } from "../lib/get";
 
 export async function getStaticProps() {
  const globalData = await getGlobalData();

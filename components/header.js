@@ -35,16 +35,18 @@ const Header = ({ globalData }) => {
      </svg>
     </a>
    )}
-   <figure className="absolute top-0 right-0 bottom-0 left-0">
-    <Image
-     alt={"le pain des lou - illustration"}
-     src={globalData.global.cover}
-     layout="fill"
-     objectFit="cover"
-     priority
-     sizes="50vw"
-    />
-   </figure>
+   <div className="absolute w-full h-full top-0 left-0">
+    <div className="w-full h-full relative">
+     <Image
+      alt={"le pain des lou - illustration"}
+      src={globalData.global.cover}
+      layout="fill"
+      objectFit="cover"
+      priority
+      sizes="50vw"
+     />
+    </div>
+   </div>
   </header>
  );
 };

@@ -1,8 +1,8 @@
-import Box from "@components/box";
-import ShopList from "@components/shoplist";
+import Box from "../components/box";
+import ShopList from "../components/shoplist";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
-import { getGlobalData, getShopData } from "@lib/get";
+import { getGlobalData, getShopData } from "../lib/get";
 
 export async function getStaticProps() {
  const globalData = await getGlobalData();
@@ -22,7 +22,7 @@ export default function Vente({ pageData, globalData }) {
   viewport.lat === viewportInit.lat && viewport.lng === viewportInit.lng;
  const Map = useMemo(
   () =>
-   dynamic(() => import("@components/leafmap"), {
+   dynamic(() => import("../components/leafmap"), {
     loading: () => <p>A map is loading</p>,
     ssr: false,
    }),

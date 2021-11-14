@@ -1,4 +1,4 @@
-import Box from "@components/box";
+import Box from "../components/box";
 import { getGlobalData, getHomeData } from "../lib/get";
 
 export async function getStaticProps() {

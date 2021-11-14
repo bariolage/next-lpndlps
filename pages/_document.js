@@ -9,7 +9,10 @@ class MyDocument extends Document {
  render() {
   return (
    <Html lang="fr">
-    <Head />
+    <Head>
+     <link rel="preconnect" href="https://app.snipcart.com" />
+     <link rel="preconnect" href="https://cdn.snipcart.com" />
+    </Head>
     <body>
      <Main />
      <NextScript />

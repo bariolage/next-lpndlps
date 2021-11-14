@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "@components/header";
-import Footer from "@components/footer";
-import SEO from "@components/seo";
-import Hero from "@components/hero";
+import Header from "./header";
+import Footer from "./footer";
+import SEO from "./seo";
+import Hero from "./hero";
 
 const Layout = ({ globalData, pageData, children }) => {
  return (

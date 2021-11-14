@@ -1,5 +1,5 @@
 import React from "react";
-import { usePickup } from "@lib/usePickup";
+import { usePickup } from "../lib/usePickup";
 
 const PickupTable = ({ pickupData }) => {
  const { data } = usePickup(pickupData);
