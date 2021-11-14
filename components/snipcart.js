@@ -1,6 +1,6 @@
 import React from "react";
 import Script from "next/script";
-import DatePicker from "./Datepicker";
+import DatePicker from "./datepicker";
 
 const Snipcart = ({ pickupLocations }) => {
  return (
