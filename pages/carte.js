@@ -1,5 +1,5 @@
 import Box from "../components/box";
-import ProductList from "../components/productlist";
+import ProductList from "../components/productList";
 import { getGlobalData, getMenuData } from "../lib/get";
 import PickupTable from "../components/PickupTable";
 

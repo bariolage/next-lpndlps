@@ -1,5 +1,5 @@
 import Box from "../components/box";
-import ShopList from "../components/shoplist";
+import ShopList from "../components/shopList";
 import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import { getGlobalData, getShopData } from "../lib/get";
