@@ -1,7 +1,7 @@
 import Box from "../components/box";
 import ProductList from "../components/productlist";
 import { getGlobalData, getMenuData } from "../lib/get";
-import PickupTable from "../components/pickuptable";
+import PickupTable from "../components/PickupTable";
 
 export async function getStaticProps() {
  const globalData = await getGlobalData();
