@@ -9,8 +9,8 @@ const SEO = ({ globalData, title }) => {
   title: globalData.global.title + " - " + title || globalData.global.title,
   image: globalData.contact.banner.url,
   description: globalData.global.description,
-  //url: canURL,
-  url: "http://localhost:3000/",
+  url: canURL,
+  url: "https://next-lpndl.vercel.app/",
  };
 
  const schema = {
