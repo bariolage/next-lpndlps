@@ -1,6 +1,7 @@
-import { usePickup } from "../lib/usePickup";
+import React from "react";
+import { usePickup } from "@lib/usePickup";
 
-export default function PickupTable({ pickupData }) {
+const PickupTable = ({ pickupData }) => {
  const { data } = usePickup(pickupData);
  return (
   <div className=" overflow-x-auto">
@@ -9,7 +10,7 @@ export default function PickupTable({ pickupData }) {
      <tr>
       <th
        className="border-2 border-gray-300 px-2 font-normal text-sm whitespace-normal"
-       rowspan="2"
+       rowSpan="2"
       >
        Commandes jusqu'à 13h la veille.
       </th>
@@ -43,7 +44,10 @@ export default function PickupTable({ pickupData }) {
         {e.name}
        </td>
        {data.map((d, index) => (
-        <td className={`text-center text-gray-700 border-2 border-gray-300`}>
+        <td
+         key={`valid-${index}`}
+         className={`text-center text-gray-700 border-2 border-gray-300`}
+        >
          {e.pickupDay.find((obj) => obj.day == d.day) ? "✔️" : ""}
         </td>
        ))}
@@ -53,4 +57,6 @@ export default function PickupTable({ pickupData }) {
    </table>
   </div>
  );
-}
+};
+
+export default PickupTable;

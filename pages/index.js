@@ -1,29 +1,21 @@
-import Text from "../components/text";
-import { Fragment } from "react";
-import Hero from "../components/hero";
-import Layout from "../components/layout";
-import dynamic from "next/dynamic";
+import Box from "@components/box";
 import { getGlobalData, getHomeData } from "../lib/get";
-import SEO from "../components/seo";
-const Cover = dynamic(() => import("../components/cover"));
 
 export async function getStaticProps() {
  const globalData = await getGlobalData();
- const homeData = await getHomeData();
+ const pageData = await getHomeData();
  return {
   props: {
-   homeData,
+   pageData,
    globalData,
   },
  };
 }
 
-export default function Home({ homeData, globalData }) {
+export default function Home({ pageData, globalData }) {
  return (
   <>
-   <SEO globalData={globalData} title={homeData.title} />
-   <Hero title={homeData.title} message={homeData.message} />
-   {homeData.sections.map((section, i) => (
+   {pageData.sections.map((section, i) => (
     <section
      key={`home-${i}`}
      style={{
@@ -32,8 +24,8 @@ export default function Home({ homeData, globalData }) {
       flexFlow: i % 2 == 0 ? "row wrap" : "row-reverse wrap",
      }}
     >
-     <Text body={section.content} />
-     <Cover image={section.cover.url} />
+     <Box body={section.content} />
+     <Box image={section.cover.url} />
     </section>
    ))}
   </>

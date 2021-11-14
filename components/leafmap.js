@@ -8,7 +8,7 @@ import {
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import "leaflet-defaulticon-compatibility";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Map = ({
  shops,

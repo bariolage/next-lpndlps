@@ -1,29 +1,21 @@
-import Hero from "../components/hero";
-import Layout from "../components/layout";
-import Text from "../components/text";
-import dynamic from "next/dynamic";
-import { getGlobalData, getLegalData } from "../lib/get";
-import SEO from "../components/seo";
-
-const Cover = dynamic(() => import("../components/cover"));
+import Box from "@components/box";
+import { getGlobalData, getLegalData } from "@lib/get";
 
 export async function getStaticProps() {
  const globalData = await getGlobalData();
- const legalData = await getLegalData();
+ const pageData = await getLegalData();
  return {
   props: {
    globalData,
-   legalData,
+   pageData,
   },
  };
 }
 
-export default function Home({ globalData, legalData }) {
+export default function Home({ globalData, pageData }) {
  return (
   <>
-   <SEO globalData={globalData} />
-   <Hero title={legalData.title} />
-   <Text body={legalData.content} fullWith="true" bg="dark" />
+   <Box body={pageData.content} fullWith="true" bg="dark" />
   </>
  );
 }

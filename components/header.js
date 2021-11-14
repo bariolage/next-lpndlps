@@ -21,7 +21,7 @@ const Header = ({ globalData }) => {
    {globalData.shop.isActive && (
     <a
      href="#"
-     className="z-20 bg-yellow-600 rounded-full fixed top-0 right-0 my-8 mx-8 p-2 lg:p-4 lg:m-12 shadow-sm hover:shadow-md snipcart-checkout"
+     className="z-20 bg-yellow-600 rounded-full fixed top-0 right-0 mt-10 mx-4 p-2 lg:p-4 lg:m-16 shadow-sm hover:shadow-md snipcart-checkout"
     >
      <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +41,8 @@ const Header = ({ globalData }) => {
      src={globalData.global.cover}
      layout="fill"
      objectFit="cover"
+     priority
+     sizes="50vw"
     />
    </figure>
   </header>

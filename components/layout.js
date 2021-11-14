@@ -1,26 +1,22 @@
-import { Fragment, useState, useEffect } from "react";
-import Header from "./header";
-import Footer from "./footer";
-import Link from "next/link";
+import React from "react";
+import Header from "@components/header";
+import Footer from "@components/footer";
+import SEO from "@components/seo";
+import Hero from "@components/hero";
 
-const Layout = ({ infos, globalData, children }) => {
+const Layout = ({ globalData, pageData, children }) => {
  return (
-  <Fragment>
-   {/* {globalData.global.annonce.visible && (
-    <div className="p-4 lg:px-16 w-screen bg-white text-gray-800">
-     <Link href="/#annonce">
-      <a>
-       {globalData.global.annonce.date} : {globalData.global.annonce.title}
-      </a>
-     </Link>
-    </div>
-   )} */}
+  <>
+   {pageData && <SEO globalData={globalData} title={pageData.title} />}
    <Header globalData={globalData} />
    <main className="mx-auto flex flex-wrap flex-col lg:flex-row bg-white">
+    {pageData && (
+     <Hero title={pageData.title} message={pageData.message || ""} />
+    )}
     {children}
    </main>
    <Footer globalData={globalData} />
-  </Fragment>
+  </>
  );
 };
 

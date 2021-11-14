@@ -6,7 +6,7 @@ const Navigation = (props) => {
  const router = useRouter();
  return (
   <>
-   <nav className="mt-8 flex-1 z-20 w-full px-4 ">
+   <nav className="mt-8 flex-1 z-20 w-full lg:px-4 ">
     <ul className="flex flex-col items-end h-full justify-end">
      {props.navigation &&
       props.navigation.map((item) => (
@@ -15,7 +15,7 @@ const Navigation = (props) => {
          router.pathname === item.slug ? "bg-blue-700" : "bg-gray-800"
         }
         hover:bg-blue-700
-        mb-2 rounded-2xl font-bold text-lg`}
+        mb-2 rounded-sm font-bold text-lg`}
         key={`nav-${item.slug}`}
        >
         <Link href={item.slug} passHref>

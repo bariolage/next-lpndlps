@@ -1,9 +1,6 @@
-export default function ShopList({
- data,
- viewportInit,
- viewport,
- setViewport,
-}) {
+import React from "react";
+
+const ShopList = ({ data, viewportInit, viewport, setViewport }) => {
  return (
   <section className="w-full xl:w-1/2 max-w-full h-fit mx-auto py-8 xl:p-16 flex flex-wrap">
    {data.map((e, i) => (
@@ -30,4 +27,6 @@ export default function ShopList({
    ))}
   </section>
  );
-}
+};
+
+export default ShopList;

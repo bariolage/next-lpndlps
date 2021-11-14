@@ -1,7 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
- purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+ purge: ["./pages/**/*.js", "./components/**/*.js"],
  darkMode: false, // or 'media' or 'class'
  theme: {
   fontFamily: { sans: ['"dosis"', "sans-serif"] },

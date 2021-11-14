@@ -1,6 +1,6 @@
-import Image from "next/image";
+import react from "react";
 
-export default function ProductList({ data, shopIsActive }) {
+const ProductList = ({ data, shopIsActive }) => {
  return (
   <section className="w-full xl:w-1/2 max-w-full h-fit mx-auto py-8 xl:p-16 flex flex-wrap">
    {data.map((e, i) => (
@@ -42,4 +42,6 @@ export default function ProductList({ data, shopIsActive }) {
    ))}
   </section>
  );
-}
+};
+
+export default ProductList;

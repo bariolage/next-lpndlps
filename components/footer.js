@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Text from "./text";
+import Box from "@components/box";
 import { useRouter } from "next/router";
 
 const Footer = ({ globalData }) => {
@@ -13,7 +13,7 @@ const Footer = ({ globalData }) => {
    id="contact"
   >
    {isHome && globalData.global.annonce.visible && (
-    <Text
+    <Box
      id="annonce"
      fullWith="true"
      bg="dark"

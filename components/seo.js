@@ -1,14 +1,16 @@
+import React from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function SEO({ globalData, title }) {
+const SEO = ({ globalData, title }) => {
  const canURL = globalData.global.url + useRouter().pathname;
 
  const seo = {
   title: globalData.global.title + " - " + title || globalData.global.title,
   image: globalData.contact.banner.url,
   description: globalData.global.description,
-  url: canURL,
+  //url: canURL,
+  url: "http://localhost:3000/",
  };
 
  const schema = {
@@ -82,4 +84,6 @@ export default function SEO({ globalData, title }) {
    </Head>
   </>
  );
-}
+};
+
+export default SEO;

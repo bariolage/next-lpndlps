@@ -1,12 +1,12 @@
+import React from "react";
 import { useEffect } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-import { unwrapImages } from "remark-unwrap-images";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-const Text = ({ children, body, id, fullWith, bg }) => {
+const Box = ({ children, body, image, id, fullWith, bg }) => {
  const controls = useAnimation();
  const [ref, inView] = useInView();
 
@@ -16,26 +16,6 @@ const Text = ({ children, body, id, fullWith, bg }) => {
   }
  }, [controls, inView]);
  const renderers = {
-  image: (props) => {
-   return (
-    <figure
-     style={{
-      position: "relative",
-      width: "50%" /* , height: `${size.height /size.width * 100}`%  */,
-      height: "20rem",
-      margin: "4rem auto",
-     }}
-    >
-     <Image
-      {...props}
-      //width={600}
-      //height={300}
-      layout="fill"
-      objectFit="contain"
-     />
-    </figure>
-   );
-  },
   link: (props) => {
    return props.href.startsWith("http") ? (
     <a rel="noopener noreferrer" target="_blank" {...props} />
@@ -47,8 +27,8 @@ const Text = ({ children, body, id, fullWith, bg }) => {
  return (
   <section
    className={`tracking-wide relative 
-   py-16 px-4 lg:p-16 mx-auto
-   w-full  min-h-96 ${fullWith ? "lg:w-full" : "xl:w-1/2"}
+   ${image ? "h-80 lg:h-auto" : "px-4 py-16 lg:p-16"}   mx-auto
+   w-full  min-h-96  ${fullWith ? "lg:w-full" : "xl:w-1/2"}
    text-white ${
     bg == "dark"
      ? "bg-gray-800"
@@ -69,12 +49,12 @@ const Text = ({ children, body, id, fullWith, bg }) => {
      visible: { opacity: 1, scale: 1 },
      hidden: { opacity: 0, scale: 0.9 },
     }}
+    className="h-full w-full "
    >
     {children ? (
      children
     ) : body ? (
      <ReactMarkdown
-      /* plugins={[unwrapImages]} */
       children={body}
       components={renderers}
       id="infos"
@@ -82,6 +62,17 @@ const Text = ({ children, body, id, fullWith, bg }) => {
        bg == "dark" ? "text-gray-300" : "text-blue-50"
       }`}
      />
+    ) : image ? (
+     <figure className="h-full w-full relative">
+      <Image
+       alt={image.alt || "le pain des lou - illustration"}
+       src={image}
+       layout="fill"
+       objectFit="cover"
+       priority
+       sizes="50vw"
+      />
+     </figure>
     ) : (
      ""
     )}
@@ -90,4 +81,4 @@ const Text = ({ children, body, id, fullWith, bg }) => {
  );
 };
 
-export default Text;
+export default Box;
