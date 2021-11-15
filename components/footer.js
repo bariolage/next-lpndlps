@@ -1,25 +1,17 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Box from "./box";
-import { useRouter } from "next/router";
+//import Box from "./box";
+//import { useRouter } from "next/router";
 
 const Footer = ({ globalData }) => {
- const router = useRouter();
- const isHome = router.pathname === "/";
+ //const router = useRouter();
+ //const isHome = router.pathname === "/";
  return (
   <footer
    className="relative flex flex-wrap flex-col lg:flex-row items-start lg:items-stretch"
    id="contact"
   >
-   {isHome && globalData.global.annonce.visible && (
-    <Box
-     id="annonce"
-     fullWith="true"
-     bg="dark"
-     body={globalData.global.annonce.body || ""}
-    />
-   )}
    <section className=" p-4  lg:p-16 bg-blue-700 text-white w-full lg:w-1/2">
     <h2 className="uppercase mb-8 text-2xl font-bold">
      {globalData.contact.title}

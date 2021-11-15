@@ -15,10 +15,10 @@ const Navigation = (props) => {
          router.pathname === item.slug ? "bg-blue-700" : "bg-gray-800"
         }
         hover:bg-blue-700
-        mb-2 rounded-sm font-bold text-lg`}
+        mb-2 rounded-sm font-bold lg:text-lg`}
         key={`nav-${item.slug}`}
        >
-        <Link href={item.slug} passHref>
+        <Link href={item.slug} passHref prefetch={false}>
          <a className="block py-2 px-3">
           {router.pathname === item.slug ? item.name : item.name}
          </a>

@@ -4,17 +4,13 @@ export default function DatePicker({ pickupLocations }) {
  const { data } = usePickup(pickupLocations);
  return (
   <>
-   <div className="snipcart-form__field">
-    <snipcart-label
-     for="retrait"
-     className="snipcart__font--tiny"
-     for="retrait"
-    >
+   <div class="snipcart-form__field">
+    <snipcart-label for="retrait" class="snipcart__font--tiny" for="retrait">
      Jour et lieu de retrait
     </snipcart-label>
     <snipcart-select
      name="retrait"
-     className="snipcart-form__select  snipcart__font--secondary snipcart__font--bold"
+     class="snipcart-form__select  snipcart__font--secondary snipcart__font--bold"
     >
      {pickupLocations.map((e, i) => (
       <optgroup key={`place-${i}`} label={e.name}>

@@ -1,3 +1,7 @@
+const withPlugins = require("next-compose-plugins");
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+ enabled: process.env.ANALYZE === "true",
+});
 const nextConfig = {
  webpack: (config, options) => {
   config.module.rules.push({
@@ -58,4 +62,4 @@ const nextConfig = {
  },
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

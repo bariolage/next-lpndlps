@@ -1,8 +1,17 @@
 import Box from "../components/box";
 import ShopList from "../components/shopList";
 import dynamic from "next/dynamic";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { getGlobalData, getShopData } from "../lib/get";
+import Thumbnail from "../components/thumbnail";
+import Markdown from "../components/markdown";
+import SEO from "../components/seo";
+import Hero from "../components/hero";
+
+const Map = dynamic(() => import("../components/leafmap"), {
+ loading: () => <p>A map is loading</p>,
+ ssr: false,
+});
 
 export async function getStaticProps() {
  const globalData = await getGlobalData();
@@ -20,16 +29,11 @@ export default function Vente({ pageData, globalData }) {
  const [viewport, setViewport] = useState(viewportInit);
  const isViewportInit =
   viewport.lat === viewportInit.lat && viewport.lng === viewportInit.lng;
- const Map = useMemo(
-  () =>
-   dynamic(() => import("../components/leafmap"), {
-    loading: () => <p>A map is loading</p>,
-    ssr: false,
-   }),
-  []
- );
+
  return (
   <>
+   <SEO globalData={globalData} title={pageData.title} />
+   <Hero title={pageData.title} message={pageData.message} />
    <ShopList
     data={pageData.categories}
     viewportInit={viewportInit}
@@ -44,8 +48,12 @@ export default function Vente({ pageData, globalData }) {
     setViewport={setViewport}
     isViewportInit={isViewportInit}
    />
-   <Box image={pageData.cover.url} />
-   <Box body={pageData.content} id="infos" />
+   <Box isThumbnail="true">
+    <Thumbnail image={pageData.cover.url} />
+   </Box>
+   <Box id="infos">
+    <Markdown body={pageData.content} />
+   </Box>
   </>
  );
 }

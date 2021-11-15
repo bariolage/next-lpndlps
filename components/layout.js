@@ -1,18 +1,12 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
-import SEO from "./seo";
-import Hero from "./hero";
 
 const Layout = ({ globalData, pageData, children }) => {
  return (
   <>
-   {pageData && <SEO globalData={globalData} title={pageData.title} />}
    <Header globalData={globalData} />
-   <main className="mx-auto flex flex-wrap flex-col lg:flex-row bg-white">
-    {pageData && (
-     <Hero title={pageData.title} message={pageData.message || ""} />
-    )}
+   <main className="mx-auto lg:flex lg:flex-row lg:flex-wrap bg-white tracking-wide ">
     {children}
    </main>
    <Footer globalData={globalData} />

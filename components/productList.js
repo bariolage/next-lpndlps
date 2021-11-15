@@ -2,7 +2,7 @@ import react from "react";
 
 const ProductList = ({ data, shopIsActive }) => {
  return (
-  <section className="w-full xl:w-1/2 max-w-full h-fit mx-auto py-8 xl:p-16 flex flex-wrap">
+  <section className="w-full max-w-full h-fit mx-auto mb-16 flex flex-wrap">
    {data.map((e, i) => (
     <div className="min-w-60 flex-1 m-4" key={i}>
      <p className="uppercase font-bold mb-2">{e.title}</p>

@@ -10,8 +10,10 @@ class MyDocument extends Document {
   return (
    <Html lang="fr">
     <Head>
-     <link rel="preconnect" href="https://app.snipcart.com" />
-     <link rel="preconnect" href="https://cdn.snipcart.com" />
+     {/* <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+     /> */}
     </Head>
     <body>
      <Main />

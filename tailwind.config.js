@@ -4,7 +4,7 @@ module.exports = {
  purge: ["./pages/**/*.js", "./components/**/*.js"],
  darkMode: false, // or 'media' or 'class'
  theme: {
-  fontFamily: { sans: ['"dosis"', "sans-serif"] },
+  fontFamily: { sans: ["sans-serif", "Quicksand", "dosis"] },
   extend: {
    fill: {
     blue: colors.cyan,

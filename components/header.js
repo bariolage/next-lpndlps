@@ -6,7 +6,7 @@ import Navigation from "./navigation";
 const Header = ({ globalData }) => {
  return (
   <header
-   className="relative z-20 flex flex-col justify-between bg-gray-800 text-white w-screen py-8 px-4 lg:h-128 lg:w-1/2 lg:p-16 lg:absolute lg:top-0 lg:left-0"
+   className="relative z-20 flex flex-col justify-between bg-gray-800 text-white w-screen pt-8 pb-2  px-4 lg:h-128 lg:w-1/2 lg:p-16 lg:absolute lg:top-0 lg:left-0"
    id="header"
   >
    <Link href="/">

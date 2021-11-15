@@ -4,7 +4,7 @@ import { usePickup } from "../lib/usePickup";
 const PickupTable = ({ pickupData }) => {
  const { data } = usePickup(pickupData);
  return (
-  <div className=" overflow-x-auto">
+  <div className=" overflow-x-auto text-sm">
    <table className="my-4 table-auto p-2 m-1 mx-auto">
     <thead>
      <tr>
