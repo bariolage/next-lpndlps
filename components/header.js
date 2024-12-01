@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Navigation from "./navigation";
 import styled from "styled-components";
 
@@ -35,7 +35,7 @@ const Figure = styled.figure`
  margin: 0;
 `;
 
-const Title = styled.a`
+const Title = styled.div`
  z-index: 2;
  height: fit-content;
  cursor: pointer;
@@ -83,9 +83,7 @@ const Header = ({ globalData }) => {
    {globalData.global.annonce.visible && (
     <TopBar>
      <Link href="/#annonce">
-      <a>
        {globalData.global.annonce.date} : {globalData.global.annonce.title}
-      </a>
      </Link>
     </TopBar>
    )}

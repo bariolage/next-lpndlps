@@ -63,7 +63,7 @@ const Hero = ({ title, message }) => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <Message source={message} />
+        <Message children={message} />
       </MessageWrap>
     </Wrap>
   );

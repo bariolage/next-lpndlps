@@ -1,18 +1,18 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styled from "styled-components";
 
 const Wrap = styled.section`
   padding: 0.5rem;
-  padding-top: ${(props) => !props.fullWith && "0"};
-  order: ${(props) => props.fullWith && "+1"};
+  padding-top: ${(props) => !props.$fullWith && "0"};
+  order: ${(props) => props.$fullWith && "+1"};
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   align-items: center;
   justify-content: center;
   grid-gap: 0.5rem;
-  max-width: ${(props) => (props.fullWith ? "100%" : "64rem")};
+  max-width: ${(props) => (props.$fullWith ? "100%" : "64rem")};
   width: 50%;
-  flex: ${(props) => props.fullWith && "1 0 100%"};
+  flex: ${(props) => props.$fullWith && "1 0 100%"};
   @media (max-width: 48rem) {
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     padding: 0.25rem;

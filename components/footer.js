@@ -1,9 +1,10 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styled from "styled-components";
 import Link from "next/link";
 import Text from "./text";
 import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 const Wrap = styled.footer`
  position: relative;
@@ -110,14 +111,17 @@ const BottomBar = styled.div`
  }
 `;
 const Footer = ({ globalData }) => {
- const router = useRouter();
- const isHome = router.pathname === "/";
+//  const router = useRouter();
+//  const isHome = router.pathname === "/";
+const pathname = usePathname();
+const isHome = pathname === "/";
+
  return (
   <Wrap id="contact">
    {isHome && globalData.global.annonce.visible && (
     <Text
      id="annonce"
-     fullWith="true"
+     fullWidth="true"
      bg="dark"
      body={globalData.global.annonce.body || ""}
     />
@@ -190,12 +194,12 @@ const Footer = ({ globalData }) => {
     </Figure>
     <BottomBar>
      <Link href="/legal" passHref>
-      <a>Mentions Légales</a>
+      Mentions Légales
      </Link>
-     <p>lepaindeslou@2021</p>
+     lepaindeslou@2021
     </BottomBar>
    </Card>
-   <a href="#header">
+   {/* <a href="/header">
     <Button
      xmlns="http://www.w3.org/2000/svg"
      viewBox="0 0 24 24"
@@ -206,7 +210,7 @@ const Footer = ({ globalData }) => {
      <path fill="none" d="M0 0h24v24H0z" />
      <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z" />
     </Button>
-   </a>
+   </a> */}
   </Wrap>
  );
 };

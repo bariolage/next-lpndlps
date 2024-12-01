@@ -23,7 +23,7 @@ export default function Home({ globalData, legalData }) {
   <Layout globalData={globalData} title={legalData.title}>
    <SEO globalData={globalData} />
    <Hero title={legalData.title} />
-   <Text body={legalData.content} fullWith="true" />
+   <Text body={legalData.content} fullWidth="true" />
   </Layout>
  );
 }

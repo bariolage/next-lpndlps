@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
+import {usePathname} from "next/navigation"
 
 const Nav = styled.nav`
   position: absolute;
@@ -29,9 +30,9 @@ const List = styled.ul`
 
 const Item = styled.li`
   background-color: ${(props) =>
-    props.isActive ? "var(--color-dark)" : "var(--color-white)"};
+    props.$isActive ? "var(--color-dark)" : "var(--color-white)"};
   color: ${(props) =>
-    props.isActive ? "var(--color-white)" : "var(--color-dark)"};
+    props.$isActive ? "var(--color-white)" : "var(--color-dark)"};
   /* padding: 0 0.5rem; */
   list-style: none;
   margin-bottom: 0.5rem;
@@ -52,7 +53,9 @@ const Item = styled.li`
 `;
 
 const Navigation = (props) => {
-  const router = useRouter();
+  // const router = useRouter();
+  const pathname = usePathname();
+  
   return (
     <>
       <Nav>
@@ -60,15 +63,13 @@ const Navigation = (props) => {
           {props.navigation &&
             props.navigation.map((item) => (
               <Item
-                isActive={router.pathname === item.slug}
+                $isActive={pathname === item.slug}
                 key={`nav-${item.slug}`}
               >
                 <Link href={item.slug} passHref>
-                  <a>
-                    {router.pathname === item.slug
+                    {pathname === item.slug
                       ? "/" + item.name
                       : item.name}
-                  </a>
                 </Link>
               </Item>
             ))}

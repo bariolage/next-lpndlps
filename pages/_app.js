@@ -58,10 +58,10 @@ a {
 function MyApp({ Component, pageProps }) {
  return (
   <>
-   <AnimateSharedLayout>
+   {/* <AnimateSharedLayout> */}
     <GlobalStyle />
     <Component {...pageProps} />
-   </AnimateSharedLayout>
+   {/* </AnimateSharedLayout> */}
   </>
  );
 }

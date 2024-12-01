@@ -96,7 +96,7 @@ const Table = ({ data, withMap, viewportInit, viewport, setViewport }) => {
                     {item.name}
                   </Button>
                 ) : (
-                  <ReactMarkdown source={item.name} />
+                  <ReactMarkdown children={item.name} />
                 )}
               </Item>
             ))}

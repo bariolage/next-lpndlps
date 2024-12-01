@@ -1,8 +1,10 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 export default function SEO({ globalData, title }) {
- const canURL = globalData.global.url + useRouter().pathname;
+  const pathname = usePathname();
+  const canURL = globalData.global.url + pathname;
 
  const seo = {
   title: globalData.global.title + " - " + title || globalData.global.title,

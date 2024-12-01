@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import Image from "next/image";
-var unwrapImages = require("remark-unwrap-images");
+import Image from "next/legacy/image";
+import rehypeUnwrapImages from 'rehype-unwrap-images'
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -21,7 +21,7 @@ const Wrap = styled.section`
  flex-direction: column;
  justify-content: center;
  align-items: flex-start;
- flex: ${(props) => props.fullWith && "1 0 100%"};
+ flex: ${(props) => props.$fullWidth && "1 0 100%"};
 
  > * {
   max-width: 64rem;
@@ -35,7 +35,7 @@ const Wrap = styled.section`
   line-height: 1.5rem;
   font-weight: bold;
   margin: 3rem 0 1rem 0;
-  text-align: ${(props) => (props.fullWith ? "left" : "center")};
+  text-align: ${(props) => (props.$fullWidth ? "left" : "center")};
   text-transform: uppercase;
  }
 
@@ -79,7 +79,7 @@ const Wrap = styled.section`
 
 const Anim = styled(motion.div)``;
 
-const Text = ({ body, id, fullWith, bg }) => {
+const Text = ({ body, id, fullWidth, bg }) => {
  const controls = useAnimation();
  const [ref, inView] = useInView();
 
@@ -118,7 +118,7 @@ const Text = ({ body, id, fullWith, bg }) => {
   },
  };
  return (
-  <Wrap id={id} fullWith={fullWith} bg={bg}>
+  <Wrap id={id} fullWidth={fullWidth} bg={bg}>
    <Anim
     ref={ref}
     animate={controls}
@@ -130,9 +130,9 @@ const Text = ({ body, id, fullWith, bg }) => {
     }}
    >
     <ReactMarkdown
-     plugins={[unwrapImages]}
-     source={body}
-     renderers={renderers}
+     remarkPlugins={[rehypeUnwrapImages]}
+     children={body}
+     components={renderers}
      id="infos"
     />
    </Anim>

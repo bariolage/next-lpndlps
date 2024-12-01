@@ -1,4 +1,7 @@
 const nextConfig = {
+    compiler: {
+        styledComponents: true,
+    },
  webpack: (config, options) => {
   config.module.rules.push({
    test: /\.md$/,
